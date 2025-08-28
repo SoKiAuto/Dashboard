@@ -95,7 +95,7 @@ async function pollSentinelCPM() {
       try {
         await cpmAlarmCheck({ commBreak: true });
       } catch (alarmErr) {
-        console.error("⚠️ Communication Break Alarm filed:", alarmErr.message);
+        console.error("⚠️ Communication Break Alarm faild:", alarmErr.message);
       }
     }
   }, POLL_INTERVAL);
