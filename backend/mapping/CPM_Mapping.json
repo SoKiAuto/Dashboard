@@ -1,0 +1,34 @@
+{
+  "cylinders": {
+    "1_HE": {
+      "name": "Cylinder 1 - Head End",
+      "registers": {
+        "40003": { "metric": "HP", "scale": 0.1, "unit": "HP" },
+        "40015": { "metric": "Discharge_Pressure", "scale": 0.1, "unit": "psi" },
+        "40025": { "metric": "Suction_Pressure", "scale": 0.1, "unit": "psi" },
+        "40035": { "metric": "Discharge_VE", "scale": 0.1, "unit": "%" },
+        "40045": { "metric": "Suction_VE", "scale": 0.1, "unit": "%" },
+        "40055": { "metric": "RodLoad_Tension", "scale": 0.1, "unit": "kN" },
+        "40065": { "metric": "RodLoad_Compression", "scale": 0.1, "unit": "kN" },
+        "40100": { "metric": "Theoretical_Discharge_Temp", "scale": 1, "unit": "°F" },
+        "40120": { "metric": "Clearance", "scale": 0.1, "unit": "%" },
+        "40200": { "metric": "Flow", "scale": 0.01, "unit": "MMSCFD" }
+      }
+    },
+    "1_CE": {
+      "name": "Cylinder 1 - Crank End",
+      "registers": {
+        "40004": { "metric": "HP", "scale": 0.1, "unit": "HP" },
+        "40016": { "metric": "Discharge_Pressure", "scale": 0.1, "unit": "psi" },
+        "40026": { "metric": "Suction_Pressure", "scale": 0.1, "unit": "psi" },
+        "40036": { "metric": "Discharge_VE", "scale": 0.1, "unit": "%" },
+        "40046": { "metric": "Suction_VE", "scale": 0.1, "unit": "%" },
+        "40056": { "metric": "RodLoad_Tension", "scale": 0.1, "unit": "kN" },
+        "40066": { "metric": "RodLoad_Compression", "scale": 0.1, "unit": "kN" },
+        "40101": { "metric": "Theoretical_Discharge_Temp", "scale": 1, "unit": "°F" },
+        "40121": { "metric": "Clearance", "scale": 0.1, "unit": "%" },
+        "40204": { "metric": "Flow", "scale": 0.01, "unit": "MMSCFD" }
+      }
+    }
+  }
+}

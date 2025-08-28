@@ -1,0 +1,34 @@
+# Node dependencies
+node_modules
+**/node_modules
+
+# Logs
+*.log
+logs/
+backend/logs/
+dashboard/logs/
+
+# Build outputs
+backend/dist
+dashboard/build
+
+# Environment files
+backend/.env
+dashboard/.env
+.env
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE settings
+.vscode
+.idea
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+*.lcov
