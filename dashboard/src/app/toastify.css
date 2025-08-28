@@ -1,0 +1,37 @@
+.my-toast {
+   background-color: oklch(0.1 0.03 270); /* darker, richer background */
+  color: var(--destructive); /* alert red text */
+  font-family: var(--font-sans);
+  border-radius: var(--radius);
+  border: 1px solid var(--border); /* subtle border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+}
+
+.my-toast svg {
+  color: var(--destructive);
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+
+@keyframes toast-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toast-leave {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+.animate-enter {
+  animation: toast-enter 0.3s ease forwards;
+}
+.animate-leave {
+  animation: toast-leave 0.3s ease forwards;
+}
