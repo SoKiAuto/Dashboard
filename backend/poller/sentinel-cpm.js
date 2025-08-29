@@ -2,7 +2,7 @@ const ModbusRTU = require("modbus-serial");
 const connectDB = require("../db/mongo");
 const saveReading = require("../services/insertData");
 const { decodeCPM } = require("../services/cpmDecode");
-const cpmAlarmCheck = require("../services/cpmAlarmCheck"); // ✅ CPM alarms
+const cpmAlarmCheck = require("../services/cpmAlarmCheck");
 
 const client = new ModbusRTU();
 
@@ -18,42 +18,54 @@ const READ_BLOCKS = [
   { start: 200, len: 100 },
 ];
 
-async function pollSentinelCPM() {
-  await connectDB();
+let lastHistoryTime = Date.now();
+let isConnected = false;
+let pollingTimer = null;
 
+async function connectCPM() {
   try {
     await client.connectTCP(HOST, { port: PORT });
     client.setID(UNIT_ID);
-    console.log(
-      `🔌 Connected to Sentinel-CPM @ ${HOST}:${PORT} (Unit ${UNIT_ID})`
-    );
+    isConnected = true;
+    console.log(`🔌 Connected to Sentinel-CPM @ ${HOST}:${PORT} (Unit ${UNIT_ID})`);
+
+    // Reset alarms if communication restored
+    await cpmAlarmCheck({ commBreak: false });
   } catch (err) {
-    console.error("❌ Modbus TCP connection failed (CPM):", err.message);
+    isConnected = false;
+    console.error(`❌ Modbus TCP connection failed (CPM): ${err.message}`);
 
     try {
       await cpmAlarmCheck({ commBreak: true });
     } catch (alarmErr) {
       console.error("⚠️ Communication Break Alarm failed:", alarmErr.message);
     }
-    return;
+
+    // Retry after 5 seconds
+    setTimeout(connectCPM, 5000);
   }
+}
 
-  let lastHistoryTime = Date.now();
+async function pollSentinelCPM() {
+  await connectDB();
+  await connectCPM();
 
-  setInterval(async () => {
+  pollingTimer = setInterval(async () => {
+    if (!isConnected) return; // Skip polling if disconnected
+
     const now = Date.now();
     const isHistory = now - lastHistoryTime >= HISTORY_INTERVAL;
     const timestamp = new Date();
 
     try {
-      // Read register blocks
+      // Read Modbus registers
       const raw = [];
       for (const blk of READ_BLOCKS) {
         const res = await client.readHoldingRegisters(blk.start, blk.len);
         raw.push(...res.data);
       }
 
-      // Decode CPM hierarchical structured object
+      // Decode CPM data
       const grouped = decodeCPM(raw);
 
       if (grouped) {
@@ -65,10 +77,8 @@ async function pollSentinelCPM() {
           quality: 192,
         };
 
-        // ✅ Save structured document only
         await saveReading(structDoc, isHistory);
 
-        // ✅ Trigger alarm check only for LIVE readings
         if (!isHistory) {
           try {
             await cpmAlarmCheck({ values: grouped });
@@ -77,25 +87,26 @@ async function pollSentinelCPM() {
           }
         }
 
-        // 🟢 Commented unnecessary logs to avoid flooding
-        // if (isHistory) {
-        //   console.log("🕓 [CPM] Saved history data");
-        //   lastHistoryTime = now;
-        // } else {
-        //   console.log("⚡ [CPM] Saved live data & checked alarms");
-        // }
         if (isHistory) lastHistoryTime = now;
-
       } else {
         console.warn("⚠️ [CPM] No data decoded, skipping MongoDB insert.");
       }
     } catch (err) {
       console.error("❌ Polling error (CPM):", err.message);
 
-      try {
-        await cpmAlarmCheck({ commBreak: true });
-      } catch (alarmErr) {
-        console.error("⚠️ Communication Break Alarm failed:", alarmErr.message);
+      if (
+        err.message.includes("Port Not Open") ||
+        err.message.includes("Timed out") ||
+        err.message.includes("ETIMEDOUT")
+      ) {
+        // Close client before reconnecting
+        try {
+          client.close(() => console.log("⚠️ CPM client closed."));
+        } catch {}
+        isConnected = false;
+
+        console.warn("⚠️ CPM client disconnected — retrying in 5 sec...");
+        setTimeout(connectCPM, 5000);
       }
     }
   }, POLL_INTERVAL);
