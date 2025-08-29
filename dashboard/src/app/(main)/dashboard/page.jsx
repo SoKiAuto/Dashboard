@@ -1,129 +1,251 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import MarkerClusterGroup from "react-leaflet-markercluster";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Loader2, Wifi, AlertTriangle, RefreshCcw } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/modeToggle";
-import { motion } from "framer-motion";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
+// Fix for default marker icons
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
+
+// Sites Data
+const sites = [
+  {
+    id: 1,
+    name: "KRS OIL Filling Plant",
+    coordinates: [22.784715, 72.405035],
+    units: [
+      {
+        id: "unit1",
+        name: "Unit 1 (Real Data)",
+        devices: [
+          { id: "vm-1", type: "VM", status: "Active" },
+          { id: "cpm-1", type: "CPM", status: "Active" },
+        ],
+      },
+      {
+        id: "unit2",
+        name: "Unit 2 (Mock)",
+        devices: [
+          { id: "vm-2", type: "VM", status: "Offline" },
+          { id: "cpm-2", type: "CPM", status: "Active" },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "KRS OIL Filter Plant",
+    coordinates: [23.378879, 72.19199],
+    units: [
+      {
+        id: "unit1",
+        name: "Unit 1",
+        devices: [
+          { id: "vm-3", type: "VM", status: "Active" },
+          { id: "cpm-3", type: "CPM", status: "Offline" },
+        ],
+      },
+      {
+        id: "unit2",
+        name: "Unit 2",
+        devices: [
+          { id: "vm-4", type: "VM", status: "Active" },
+          { id: "cpm-4", type: "CPM", status: "Active" },
+        ],
+      },
+      {
+        id: "unit3",
+        name: "Unit 3",
+        devices: [
+          { id: "vm-5", type: "VM", status: "Active" },
+          { id: "cpm-5", type: "CPM", status: "Offline" },
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "KRS OIL Distribute",
+    coordinates: [23.00501, 72.996703],
+    units: [
+      {
+        id: "unit1",
+        name: "Unit 1",
+        devices: [
+          { id: "vm-6", type: "VM", status: "Active" },
+          { id: "cpm-6", type: "CPM", status: "Active" },
+        ],
+      },
+    ],
+  },
+];
 
 export default function Dashboard() {
-  const [devices, setDevices] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [selectedSite, setSelectedSite] = useState(null);
 
-  const fetchDeviceStatus = async () => {
-    try {
-      const res = await fetch("/api/devices/status", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      });
-
-      if (!res.ok) {
-        const text = await res.text();
-        console.error("Unexpected API Response:", text);
-        throw new Error(`API error: ${res.status}`);
-      }
-
-      const data = await res.json();
-      if (data.success) {
-        setDevices(data.devices);
-      } else {
-        console.error("API Error:", data.message);
-      }
-    } catch (error) {
-      console.error("Failed to fetch device status:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchDeviceStatus();
-    const interval = setInterval(fetchDeviceStatus, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  // Calculate totals
+  const totalSites = sites.length;
+  const totalUnits = sites.reduce((acc, site) => acc + site.units.length, 0);
+  const totalDevices = sites.reduce(
+    (acc, site) =>
+      acc + site.units.reduce((uAcc, u) => uAcc + u.devices.length, 0),
+    0
+  );
+  const activeAlarms = 3;
 
   return (
-    <main className="flex flex-col min-h-screen w-full p-6 bg-background text-foreground">
-      {/* Header */}
-      <motion.div
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        className="flex justify-between items-center mb-8"
-      >
-        <h1 className="text-3xl font-bold tracking-tight">Device Dashboard</h1>
-        <div className="flex gap-3 items-center">
-          <ModeToggle />
-          <Button
-            onClick={fetchDeviceStatus}
-            variant="default"
-            className="flex items-center gap-2 rounded-full px-5"
-          >
-            <RefreshCcw className="h-5 w-5" />
-            Refresh
-          </Button>
-        </div>
-      </motion.div>
+    <div className="p-4 space-y-4 min-h-screen w-full">
+      {/* Top Cards */}
+      <div className="grid grid-cols-4 gap-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>Total Sites</CardTitle>
+          </CardHeader>
+          <CardContent className="text-2xl font-bold">{totalSites}</CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Total Units</CardTitle>
+          </CardHeader>
+          <CardContent className="text-2xl font-bold">{totalUnits}</CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Total Devices</CardTitle>
+          </CardHeader>
+          <CardContent className="text-2xl font-bold">{totalDevices}</CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Active Alarms</CardTitle>
+          </CardHeader>
+          <CardContent className="text-2xl font-bold text-red-500">
+            {activeAlarms}
+          </CardContent>
+        </Card>
+      </div>
 
-      {/* Device Status Cards */}
-      {loading ? (
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div
-              key={i}
-              className="h-40 rounded-2xl bg-muted animate-pulse"
-            ></div>
-          ))}
-        </div>
-      ) : (
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {devices.map((device, index) => (
-            <motion.div
-              key={device.deviceId}
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: index * 0.05, duration: 0.3 }}
-            >
-              <Card className="rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-border bg-card">
-                <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <CardTitle className="text-lg font-semibold">
-                    {device.deviceName}
-                  </CardTitle>
-                  {device.status === "online" ? (
-                    <Wifi className="h-6 w-6 text-green-500" />
-                  ) : (
-                    <AlertTriangle className="h-6 w-6 text-red-500" />
+      {/* Table + Map Section */}
+      <div className="grid grid-cols-5 gap-4">
+        {/* Table Section - Scrollable */}
+        <div className="col-span-3">
+          <Card className="h-[600px] flex flex-col">
+            <CardHeader>
+              <CardTitle>Units Overview</CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1 overflow-y-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Site</TableHead>
+                    <TableHead>Unit</TableHead>
+                    <TableHead>Device</TableHead>
+                    <TableHead>Status</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {sites.map((site) =>
+                    site.units.map((unit) =>
+                      unit.devices.map((device) => (
+                        <TableRow key={device.id}>
+                          <TableCell>{site.name}</TableCell>
+                          <TableCell>{unit.name}</TableCell>
+                          <TableCell>{device.type}</TableCell>
+                          <TableCell>
+                            {device.status === "Active" ? (
+                              <span className="text-green-500">Active</span>
+                            ) : (
+                              <span className="text-red-500">Offline</span>
+                            )}
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )
                   )}
-                </CardHeader>
-
-                <CardContent>
-                  <p
-                    className={`text-lg font-semibold ${
-                      device.status === "online"
-                        ? "text-green-600"
-                        : "text-red-600"
-                    }`}
-                  >
-                    {device.status === "online" ? "🟢 Online" : "🔴 Offline"}
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Last Updated:{" "}
-                    <span className="font-medium">
-                      {new Date(device.lastUpdated).toLocaleTimeString()}
-                    </span>
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
         </div>
-      )}
-    </main>
+
+        {/* Map Section with Site Details */}
+        <div className="col-span-2">
+          <Card className="h-[600px] flex flex-col">
+            <CardHeader>
+              <CardTitle>GIS Map</CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <MapContainer
+                center={[23.2, 72.5]}
+                zoom={8}
+                style={{ height: "100%", width: "100%", borderRadius: "12px" }}
+              >
+                {/* Map Style */}
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+
+                {/* Clustering */}
+                <MarkerClusterGroup>
+                  {sites.map((site) => (
+                    <Marker
+                      key={site.id}
+                      position={site.coordinates}
+                      eventHandlers={{
+                        click: () => setSelectedSite(site),
+                      }}
+                    >
+                      <Popup>
+                        <strong>{site.name}</strong>
+                        <br />
+                        Units: {site.units.length}
+                        <br />
+                        Devices:{" "}
+                        {site.units.reduce(
+                          (acc, unit) => acc + unit.devices.length,
+                          0
+                        )}
+                      </Popup>
+                    </Marker>
+                  ))}
+                </MarkerClusterGroup>
+              </MapContainer>
+            </CardContent>
+
+            {/* Site Details Inside Map Card */}
+            {selectedSite && (
+              <div className="border-t p-3">
+                <p className="text-lg font-semibold">{selectedSite.name}</p>
+                <p>Units: {selectedSite.units.length}</p>
+                <p>
+                  Devices:{" "}
+                  {selectedSite.units.reduce(
+                    (acc, unit) => acc + unit.devices.length,
+                    0
+                  )}
+                </p>
+              </div>
+            )}
+          </Card>
+        </div>
+      </div>
+    </div>
   );
 }
