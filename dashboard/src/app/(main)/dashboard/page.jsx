@@ -194,7 +194,7 @@ export default function Dashboard() {
               <MapContainer
                 center={[23.2, 72.5]}
                 zoom={8}
-                style={{ height: "100%", width: "100%", borderRadius: "12px" }}
+                style={{ height: "110%", width: "100%", borderRadius: "12px" }}
               >
                 {/* Map Style */}
                 <TileLayer
