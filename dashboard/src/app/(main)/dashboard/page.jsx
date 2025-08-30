@@ -186,7 +186,7 @@ export default function Dashboard() {
 
         {/* Map Section with Site Details */}
         <div className="col-span-2">
-          <Card className="h-[600px] flex flex-col">
+          <Card className="h-[601px] flex flex-col">
             <CardHeader>
               <CardTitle>GIS Map</CardTitle>
             </CardHeader>
