@@ -41,7 +41,7 @@ const sites = [
       },
       {
         id: "unit2",
-        name: "Unit 2 (Mock)",
+        name: "Unit 3 (Mock)",
         devices: [
           { id: "vm-2", type: "VM", status: "Offline" },
           { id: "cpm-2", type: "CPM", status: "Active" },
