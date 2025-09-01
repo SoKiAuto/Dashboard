@@ -52,7 +52,7 @@ const sites = [
   {
     id: 2,
     name: "KRS OIL Filter Plant",
-    coordinates: [23.378879, 72.19199],
+    coordinates: [22.378879, 72.19199],
     units: [
       {
         id: "unit3",
