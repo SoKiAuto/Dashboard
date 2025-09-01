@@ -33,7 +33,7 @@ const sites = [
     units: [
       {
         id: "unit1",
-        name: "Unit 2 (Real Data)",
+        name: "Unit 1 (Real Data)",
         devices: [
           { id: "vm-1", type: "VM", status: "Active" },
           { id: "cpm-1", type: "CPM", status: "Active" },
