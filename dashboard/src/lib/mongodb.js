@@ -29,3 +29,5 @@ export async function connectToDatabase() {
   const db = client.db("wi_controller"); // Explicitly use your DB name
   return { client, db };
 }
+
+

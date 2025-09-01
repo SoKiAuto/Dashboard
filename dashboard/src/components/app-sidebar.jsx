@@ -97,6 +97,15 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
+
+               <SidebarMenuItem key="Units">
+                <SidebarMenuButton asChild>
+                  <Link href="/units" className="flex items-center">
+                    <ActivitySquare />
+                    Units
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

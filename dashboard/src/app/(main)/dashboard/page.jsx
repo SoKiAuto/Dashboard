@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import L from "leaflet";
@@ -54,8 +55,8 @@ const sites = [
     coordinates: [23.378879, 72.19199],
     units: [
       {
-        id: "unit1",
-        name: "Unit 1",
+        id: "unit3",
+        name: "Unit 3",
         devices: [
           { id: "vm-3", type: "VM", status: "Active" },
           { id: "cpm-3", type: "CPM", status: "Offline" },
@@ -143,7 +144,7 @@ export default function Dashboard() {
 
       {/* Table + Map Section */}
       <div className="grid grid-cols-5 gap-4">
-        {/* Table Section - Scrollable */}
+        {/* Table Section */}
         <div className="col-span-3">
           <Card className="h-[600px] flex flex-col">
             <CardHeader>
@@ -157,6 +158,7 @@ export default function Dashboard() {
                     <TableHead>Unit</TableHead>
                     <TableHead>Device</TableHead>
                     <TableHead>Status</TableHead>
+                    <TableHead>Action</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -174,6 +176,22 @@ export default function Dashboard() {
                               <span className="text-red-500">Offline</span>
                             )}
                           </TableCell>
+                          <TableCell>
+                            {unit.id === "unit1" ? (
+                              <Link href="/units/unit1">
+                                <button className="px-3 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                  View
+                                </button>
+                              </Link>
+                            ) : (
+                              <button
+                                className="px-3 py-1 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed"
+                                disabled
+                              >
+                                N/A
+                              </button>
+                            )}
+                          </TableCell>
                         </TableRow>
                       ))
                     )
@@ -184,7 +202,7 @@ export default function Dashboard() {
           </Card>
         </div>
 
-        {/* Map Section with Site Details */}
+        {/* Map Section */}
         <div className="col-span-2">
           <Card className="h-[600px] flex flex-col">
             <CardHeader>
@@ -196,7 +214,6 @@ export default function Dashboard() {
                 zoom={8}
                 style={{ height: "100%", width: "100%", borderRadius: "12px" }}
               >
-                {/* Map Style */}
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -229,7 +246,7 @@ export default function Dashboard() {
               </MapContainer>
             </CardContent>
 
-            {/* Site Details Inside Map Card */}
+            {/* Site Details */}
             {selectedSite && (
               <div className="border-t p-3">
                 <p className="text-lg font-semibold">{selectedSite.name}</p>
