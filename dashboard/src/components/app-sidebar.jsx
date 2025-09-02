@@ -78,7 +78,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
 
-              {/* Sentinel-VM Link */}
+              {/* Sentinel-VM Link
               <SidebarMenuItem key="Sentinel-VM">
                 <SidebarMenuButton asChild>
                   <Link href="/vm" className="flex items-center">
@@ -86,17 +86,17 @@ export function AppSidebar() {
                     Sentinel-VM
                   </Link>
                 </SidebarMenuButton>
-              </SidebarMenuItem>
+              </SidebarMenuItem> */}
 
               {/* Sentinel-CPM Link */}
-              <SidebarMenuItem key="Sentinel-CPM">
+              {/* <SidebarMenuItem key="Sentinel-CPM">
                 <SidebarMenuButton asChild>
                   <Link href="/cpm" className="flex items-center">
                     <ActivitySquare />
                     Sentinel-CPM
                   </Link>
                 </SidebarMenuButton>
-              </SidebarMenuItem>
+              </SidebarMenuItem> */}
 
                <SidebarMenuItem key="Units">
                 <SidebarMenuButton asChild>
