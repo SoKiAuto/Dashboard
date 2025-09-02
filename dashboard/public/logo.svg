@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="W!Platform Logo2.svg"
+   sodipodi:docname="logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,12 +25,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.9301"
-     inkscape:cx="202.83923"
-     inkscape:cy="95.849956"
-     inkscape:window-width="1728"
-     inkscape:window-height="1010"
-     inkscape:window-x="-6"
-     inkscape:window-y="-6"
+     inkscape:cx="203.09829"
+     inkscape:cy="95.590902"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -124,16 +124,16 @@
        ry="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:22.8846px;font-family:'neo latina';-inkscape-font-specification:'neo latina, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.381965;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:7.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="2.1647983"
-       y="14.958875"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:18.3563px;font-family:'neo latina';-inkscape-font-specification:'neo latina, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.306384;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:7.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="1.7777957"
+       y="15.875293"
        id="text1"
-       transform="scale(0.89260969,1.1203105)"><tspan
+       transform="scale(0.92257329,1.0839247)"><tspan
          sodipodi:role="line"
          id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:22.8845991px;font-family:'neo latina';-inkscape-font-specification:'neo latina, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.381965;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:7.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-         x="2.1647983"
-         y="14.958875">W!</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:18.3563px;font-family:'neo latina';-inkscape-font-specification:'neo latina, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.306384;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:7.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="1.7777957"
+         y="15.875293">W!</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.2262px;font-family:'neo latina';-inkscape-font-specification:'neo latina, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#1c4365;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
