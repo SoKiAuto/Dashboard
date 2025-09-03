@@ -77,7 +77,7 @@ export default function SentinelCPMPage() {
   );
 
   return (
-    <main className="p-4 space-y-9 min-h-screen w-full">
+    <main className="p-4 space-y-8 min-h-screen w-full">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center gap-3">
