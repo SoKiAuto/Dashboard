@@ -85,7 +85,7 @@ export default function SentinelCPMPage() {
           <Factory className="w-7 h-7 text-emerald-500" />
         </div>
 
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-3 flex-wrap">
           {/* New PV/PT Curves Button */}
           <Link href="/cpm/charts">
             <Button variant="secondary">
