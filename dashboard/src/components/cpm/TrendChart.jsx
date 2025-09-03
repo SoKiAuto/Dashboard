@@ -16,24 +16,24 @@ export default function TrendChart({ data, theme = "light" }) {
     setMounted(true);
   }, []);
 
-  const { seriesKeys } = useMemo(() => {
-    const keys = new Set();
-    (data || []).forEach((r) => {
-      Object.keys(r || {}).forEach((k) => {
-        if (k !== "timestamp") keys.add(k);
-      });
-    });
-    return { seriesKeys: Array.from(keys) };
+  const { chartData, seriesMap } = useMemo(() => {
+    // Check if data is a valid object with 'data' and 'seriesMap' properties
+    if (!data || !data.data || !data.seriesMap) {
+      return { chartData: [], seriesMap: {} };
+    }
+    return { chartData: data.data, seriesMap: data.seriesMap };
   }, [data]);
 
-  const toggleKey = (metric) => {
-    setHidden((prev) => ({ ...prev, [metric]: !prev[metric] }));
+  const seriesKeys = useMemo(() => Object.keys(seriesMap), [seriesMap]);
+
+  const toggleKey = (metricPath) => {
+    setHidden((prev) => ({ ...prev, [metricPath]: !prev[metricPath] }));
   };
 
   const exportCSV = () => {
-    if (!data?.length) return;
-    const headers = ["timestamp", ...seriesKeys].join(",");
-    const rows = data.map((r) =>
+    if (!chartData?.length) return;
+    const headers = ["timestamp", ...seriesKeys.map((k) => seriesMap[k] || k)].join(",");
+    const rows = chartData.map((r) =>
       [r.timestamp, ...seriesKeys.map((k) => r[k] ?? "")].join(",")
     );
     const blob = new Blob([headers + "\n" + rows.join("\n")], {
@@ -57,7 +57,7 @@ export default function TrendChart({ data, theme = "light" }) {
     link.click();
   };
 
-  if (!data || !data.length) {
+  if (!chartData || chartData.length === 0) {
     return (
       <div className="bg-card text-card-foreground rounded-2xl shadow p-4 h-[520px] flex items-center justify-center text-muted-foreground">
         No data to display
@@ -68,8 +68,8 @@ export default function TrendChart({ data, theme = "light" }) {
   const series = seriesKeys
     .filter((k) => !hidden[k])
     .map((k) => ({
-      name: k,
-      data: data.map((d) => [new Date(d.timestamp).getTime(), d[k]]),
+      name: seriesMap[k] || k, // Use the friendly label
+      data: chartData.map((d) => [new Date(d.timestamp).getTime(), d[k]]),
     }));
 
   const chartOptions = {
@@ -80,7 +80,7 @@ export default function TrendChart({ data, theme = "light" }) {
       toolbar: {
         show: true,
         tools: {
-          download: false, // we handle our own export buttons
+          download: false,
           zoom: true,
           zoomin: true,
           zoomout: true,
@@ -105,25 +105,20 @@ export default function TrendChart({ data, theme = "light" }) {
       },
     },
     legend: {
-      show: true,
-      onItemClick: {
-        toggleDataSeries: false, // we manage visibility ourselves
-      },
-      formatter: (seriesName) => {
-        return hidden[seriesName] ? `${seriesName} (hidden)` : seriesName;
-      },
+      show: false, // We use a custom legend below the chart
     },
     tooltip: {
       shared: true,
       theme: theme === "dark" ? "dark" : "light",
       x: { format: "dd MMM yyyy HH:mm:ss" },
+      y: {
+        formatter: (val) => val.toFixed(2),
+      },
     },
     grid: {
       borderColor: theme === "dark" ? "#333" : "#e5e5e5",
     },
-    colors: seriesKeys.map(
-      (_, i) => `hsl(${(i * 57) % 360} 80% 45%)`
-    ),
+    colors: seriesKeys.map((_, i) => `hsl(${(i * 57) % 360} 80% 45%)`),
   };
 
   if (!mounted) return null;
@@ -176,7 +171,7 @@ export default function TrendChart({ data, theme = "light" }) {
               color: `hsl(${(i * 57) % 360} 80% 45%)`,
             }}
           >
-            {hidden[k] ? `Show ${k}` : `Hide ${k}`}
+            {hidden[k] ? `Show ${seriesMap[k] || k}` : `${seriesMap[k] || k}`}
           </button>
         ))}
       </div>

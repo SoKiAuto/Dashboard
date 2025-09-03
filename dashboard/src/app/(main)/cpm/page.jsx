@@ -50,23 +50,29 @@ export default function SentinelCPMPage() {
   const cylinders = useMemo(() => doc?.values?.cylinders || {}, [doc]);
   const stages = useMemo(() => doc?.values?.stages || {}, [doc]);
 
+  // Get sorted cylinder keys but limit to first 3
   const cylinderKeys = useMemo(
     () =>
-      Object.keys(cylinders).sort((a, b) => {
-        const ai = parseInt(a.split("_")[1] || "0", 10);
-        const bi = parseInt(b.split("_")[1] || "0", 10);
-        return ai - bi;
-      }),
+      Object.keys(cylinders)
+        .sort((a, b) => {
+          const ai = parseInt(a.split("_")[1] || "0", 10);
+          const bi = parseInt(b.split("_")[1] || "0", 10);
+          return ai - bi;
+        })
+        .slice(0, 3), // ✅ Only first 3 cylinders
     [cylinders]
   );
 
+  // Get sorted stage keys but limit to first 3
   const stageKeys = useMemo(
     () =>
-      Object.keys(stages).sort((a, b) => {
-        const ai = parseInt(a.split("_")[1] || "0", 10);
-        const bi = parseInt(b.split("_")[1] || "0", 10);
-        return ai - bi;
-      }),
+      Object.keys(stages)
+        .sort((a, b) => {
+          const ai = parseInt(a.split("_")[1] || "0", 10);
+          const bi = parseInt(b.split("_")[1] || "0", 10);
+          return ai - bi;
+        })
+        .slice(0, 3), // ✅ Only first 3 stages
     [stages]
   );
 

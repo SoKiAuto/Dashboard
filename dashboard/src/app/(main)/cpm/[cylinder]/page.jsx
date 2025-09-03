@@ -1,4 +1,3 @@
-// dashboard/src/app/(main)/cpm/[cylinder]/page.jsx
 "use client";
 
 import { useParams } from "next/navigation";
@@ -8,6 +7,7 @@ import CylinderCharts from "@/components/cpm/CylinderCharts";
 import CylinderHistoryTable from "@/components/cpm/CylinderHistoryTable";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import BackToCPMButton from "@/components/cpm/BackToCPMButton";  // ✅ NEW
 
 export default function CylinderPage() {
   const { cylinder } = useParams();
@@ -34,7 +34,6 @@ export default function CylinderPage() {
     }
   };
 
-  // ✅ Optimized polling: pause when tab inactive
   useEffect(() => {
     const startPolling = () => {
       clearInterval(intervalRef.current);
@@ -60,7 +59,6 @@ export default function CylinderPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cylinder]);
 
-  // ✅ Better error handling UI
   if (error) {
     return (
       <main className="p-6 w-full">
@@ -77,7 +75,6 @@ export default function CylinderPage() {
     );
   }
 
-  // ✅ Better loading experience: skeleton placeholders
   if (!doc) {
     return (
       <main className="p-6 space-y-6 w-full">
@@ -113,12 +110,16 @@ export default function CylinderPage() {
         <h1 className="text-2xl font-bold capitalize">
           {cylinder.replace("_", " ")}
         </h1>
-        {/* ✅ Live update indicator */}
-        <span className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Last updated: {new Date(doc.timestamp).toLocaleTimeString()}
-        </span>
+
+        {/* ✅ Back Button */}
+        <BackToCPMButton />
       </div>
+
+      {/* Live update indicator */}
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+        Last updated: {new Date(doc.timestamp).toLocaleTimeString()}
+      </span>
 
       {/* Cylinder Metrics */}
       <Card className="p-4">

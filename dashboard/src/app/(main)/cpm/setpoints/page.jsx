@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { toast } from "sonner";
+import BackToCPMButton from "@/components/cpm/BackToCPMButton";  // ✅ NEW
+
+
 
 export default function CPMSetpointsPage() {
   const [data, setData] = useState(null);
@@ -97,7 +100,10 @@ export default function CPMSetpointsPage() {
 
   return (
     <div className="p-4 space-y-6 min-h-screen w-full">
+            {/* ✅ Back Button */}
+    <BackToCPMButton />
       <h1 className="text-2xl font-bold">CPM Setpoint Configuration</h1>
+      
       <Tabs defaultValue="unit">
         <TabsList>
           <TabsTrigger value="unit">Unit</TabsTrigger>

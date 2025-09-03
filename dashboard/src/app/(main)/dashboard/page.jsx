@@ -41,10 +41,10 @@ const sites = [
       },
       {
         id: "unit2",
-        name: "Unit 2 (Mock)",
+        name: "Unit 2 ",
         devices: [
           { id: "vm-2", type: "VM", status: "Offline" },
-          { id: "cpm-2", type: "CPM", status: "Active" },
+          { id: "cpm-2", type: "CPM", status: "Offline" },
         ],
       },
     ],
@@ -58,7 +58,7 @@ const sites = [
         id: "unit3",
         name: "Unit 3",
         devices: [
-          { id: "vm-3", type: "VM", status: "Active" },
+          { id: "vm-3", type: "VM", status: "Offline" },
           { id: "cpm-3", type: "CPM", status: "Offline" },
         ],
       },
@@ -66,15 +66,15 @@ const sites = [
         id: "unit2",
         name: "Unit 2",
         devices: [
-          { id: "vm-4", type: "VM", status: "Active" },
-          { id: "cpm-4", type: "CPM", status: "Active" },
+          { id: "vm-4", type: "VM", status: "Offline" },
+          { id: "cpm-4", type: "CPM", status: "Offline" },
         ],
       },
       {
         id: "unit3",
         name: "Unit 3",
         devices: [
-          { id: "vm-5", type: "VM", status: "Active" },
+          { id: "vm-5", type: "VM", status: "Offline" },
           { id: "cpm-5", type: "CPM", status: "Offline" },
         ],
       },
@@ -86,11 +86,11 @@ const sites = [
     coordinates: [23.00501, 72.996703],
     units: [
       {
-        id: "unit1",
-        name: "Unit 1",
+        id: "unit 4",
+        name: "Unit 4",
         devices: [
-          { id: "vm-6", type: "VM", status: "Active" },
-          { id: "cpm-6", type: "CPM", status: "Active" },
+          { id: "vm-6", type: "VM", status: "Offline" },
+          { id: "cpm-6", type: "CPM", status: "Offline" },
         ],
       },
     ],

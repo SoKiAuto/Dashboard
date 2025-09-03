@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { AlertTriangle, Activity, BatteryWarning, Factory, Gauge, Sparkles } from "lucide-react";
+import BackToCPMButton from "@/components/cpm/BackToCPMButton";  // ✅ NEW
+
 
 // Lazy load ApexCharts
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
@@ -235,10 +237,14 @@ export default function CPMDiagnosticPage() {
           </div>
           <h1 className="text-2xl font-bold">CPM Diagnostic Overview</h1>
         </div>
+        
         <div className="text-sm text-muted-foreground">
           Last updated: {new Date(doc.timestamp).toLocaleTimeString()}
+                {/* ✅ Back Button */}
+    <BackToCPMButton />
         </div>
       </div>
+      
 
       {/* Unit Health */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

@@ -57,33 +57,27 @@ function pushKey(holder, key, val) {
 /**
  * Body (POST):
  * {
- * level: "unit" | "cylinder" | "stage" | "custom",
- * start: ISO, end: ISO,
- * interval: "1m" | "5m" | "15m" | "1h" | "1d",
- * cylinders: ["1","2"],   // when level=cylinder/custom
- * stages: ["1","2"],       // when level=stage/custom
- * metrics: [
- * // each becomes a series in response
- * // pick ONE of:
- * // unit metric:
- * { label: "Total HP", path: "unit.Total_HP" },
- * // cylinder metric:
- * { label: "C1 Head HP", path: "cylinders.cylinder_1.head_end.HP" },
- * // stage metric:
- * { label: "Stage 1 Flow", path: "stages.stage_1.Flow_MMSCFD" }
- * ]
+ *   level: "unit" | "cylinder" | "stage" | "custom",
+ *   start: ISO, end: ISO,
+ *   interval: "1m" | "5m" | "15m" | "1h" | "1d",
+ *   cylinders: ["1","2"],   // when level=cylinder/custom
+ *   stages: ["1","2"],      // when level=stage/custom
+ *   metrics: [
+ *     // each becomes a series in response
+ *     // pick ONE of:
+ *     // unit metric:
+ *     { label: "Total HP", path: "unit.Total_HP" },
+ *     // cylinder metric:
+ *     { label: "C1 Head HP", path: "cylinders.cylinder_1.head_end.HP" },
+ *     // stage metric:
+ *     { label: "Stage 1 Flow", path: "stages.stage_1.Flow_MMSCFD" }
+ *   ]
  * }
  *
  * Response:
- * {
- * seriesMap: {
- * "seriesKey1": "Label 1",
- * "seriesKey2": "Label 2"
- * },
- * data: [
- * { timestamp: "...", "path.to.val1": 123, "path.to.val2": 456, ... }
+ * [
+ *   { timestamp: "...", "<seriesKey1>": 123, "<seriesKey2>": 456, ... }
  * ]
- * }
  */
 
 export async function POST(req) {
@@ -115,7 +109,6 @@ export async function POST(req) {
 
     // build buckets
     const buckets = new Map(); // key: ISO, value: { accum: {seriesKey: [vals...]}}
-    const seriesMap = {}; // CRITICAL: Map path to label
     for (const doc of docs) {
       const bTs = bucketTimestamp(doc.timestamp, interval);
       if (!bTs) continue;
@@ -123,9 +116,8 @@ export async function POST(req) {
       if (!buckets.has(bucketKey)) buckets.set(bucketKey, { accum: {} });
 
       for (const m of metrics) {
-        // series key = provided path
-        const seriesKey = m.path;
-        seriesMap[seriesKey] = m.label; // Store the label
+        // series key = provided label (safe fallback to path)
+        const seriesKey = m.label || m.path;
         const val = deepRead(doc.values, m.path);
         pushKey(buckets.get(bucketKey).accum, seriesKey, typeof val === "number" ? val : null);
       }
@@ -141,7 +133,7 @@ export async function POST(req) {
     // Ensure chronological order
     result.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
 
-    return NextResponse.json({ data: result, seriesMap });
+    return NextResponse.json(result);
   } catch (err) {
     console.error("❌ /api/cpm/trends POST error:", err);
     return NextResponse.json({ error: "Failed to fetch CPM trends" }, { status: 500 });

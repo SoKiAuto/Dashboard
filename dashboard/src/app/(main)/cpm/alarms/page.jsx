@@ -8,6 +8,8 @@ import { DownloadIcon, RefreshCwIcon } from "lucide-react";
 import DataTable from "@/components/ui/data-table";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import BackToCPMButton from "@/components/cpm/BackToCPMButton";  // ✅ NEW
+
 
 export default function CPMAlarmsPage() {
   const [alarms, setAlarms] = useState([]);
@@ -243,6 +245,9 @@ export default function CPMAlarmsPage() {
         </div>
 
         <Button onClick={fetchAlarms}>Search</Button>
+        {/* ✅ Back Button */}
+        <BackToCPMButton />
+        
       </div>
 
       <Card>

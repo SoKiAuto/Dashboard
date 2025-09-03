@@ -1,7 +1,7 @@
 "use client";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertTriangle } from "lucide-react";
-import Link from "next/link";
+import Link from "next/link"; 
 
 function Dot({ active = false, label }) {
   return (
@@ -22,16 +22,16 @@ export default function CPMAlarmFlagsTile({ unit }) {
   const sensor = unit?.Sensor_Bad_Flag || {};
   const alarms = unit?.Alarm_Bits || {};
 
-  // ✅ Get sorted cylinder keys but LIMIT to first 3
   const cylKeys = Array.from(
-    new Set([...Object.keys(sensor || {}), ...Object.keys(alarms || {})])
-  )
-    .sort((a, b) => {
-      const ai = parseInt(a.split("_")[1] || "0", 10);
-      const bi = parseInt(b.split("_")[1] || "0", 10);
-      return ai - bi;
-    })
-    .slice(0, 3); // ✅ Only first 3 cylinders will be shown
+    new Set([
+      ...Object.keys(sensor || {}),
+      ...Object.keys(alarms || {}),
+    ])
+  ).sort((a, b) => {
+    const ai = parseInt(a.split("_")[1] || "0", 10);
+    const bi = parseInt(b.split("_")[1] || "0", 10);
+    return ai - bi;
+  });
 
   return (
     <Card className="w-full shadow-sm">
@@ -58,11 +58,11 @@ export default function CPMAlarmFlagsTile({ unit }) {
             const a = alarms[key] || {};
             return (
               <div key={key} className="p-3 rounded-lg border bg-background">
-                <Link
-                  href={`/cpm/${key}`}
-                  className="text-sm font-semibold mb-2 capitalize text-primary hover:underline"
+               <Link
+                href={`/cpm/${key}`}
+                className="text-sm font-semibold mb-2 capitalize text-primary hover:underline"
                 >
-                  {key.replace("_", " ")}
+                {key.replace("_", " ")}
                 </Link>
 
                 <div className="grid grid-cols-2 gap-3">

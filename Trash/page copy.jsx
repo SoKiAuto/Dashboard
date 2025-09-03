@@ -3,21 +3,24 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import TabsNav from "@/components/cpm/TabsNav";
 import FiltersPanel from "@/components/cpm/FiltersPanel";
 import TrendChart from "@/components/cpm/TrendChart";
-import BackToCPMButton from "@/components/cpm/BackToCPMButton";  // ✅ NEW
 
+// helper to build ISO strings for "last X" quick ranges
+function isoRangeLast(hours = 1) {
+  const to = new Date();
+  const from = new Date(to.getTime() - hours * 60 * 60 * 1000);
+  // return local-ish datetime strings (ISO)
+  return { start: from.toISOString(), end: to.toISOString() };
+}
 
 export default function CPMTrendsPage() {
-  const [mode, setMode] = useState("unit"); // Change default to 'unit' for a simple initial view
+  const [mode, setMode] = useState("cylinder"); // default tab
   const [payload, setPayload] = useState(null);
   const [data, setData] = useState([]);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const [autoRefresh, setAutoRefresh] = useState(false);
 
-  const applyFilters = (p) => {
-    console.log("Applying filters with payload:", p); // Debugging
-    setPayload(p);
-  };
+  const applyFilters = (p) => setPayload(p);
 
   const fetchTrends = useCallback(async (body) => {
     setBusy(true);
@@ -39,8 +42,7 @@ export default function CPMTrendsPage() {
         throw new Error(j?.error || `HTTP ${res.status}`);
       }
       const json = await res.json();
-      console.log("Received data:", json); // Debugging
-      setData(json);
+      setData(json || []);
     } catch (e) {
       console.error("Trends fetch failed:", e);
       setErr(e.message || "Failed to load trends");
@@ -50,7 +52,30 @@ export default function CPMTrendsPage() {
     }
   }, []);
 
-  // Fetch trends when filters change
+  // -------------- Default payload on first mount --------------
+  useEffect(() => {
+    // default: cylinder mode, C1 head-end suction & discharge, last 1 hour, 5m interval
+    const { start, end } = isoRangeLast(1);
+    const defaultMetrics = [
+      { label: "C1 - Suction Pressure", path: "cylinder_1.head_end.Suction_Pressure_psi" },
+      { label: "C1 - Discharge Pressure", path: "cylinder_1.head_end.Discharge_Pressure_psi" },
+    ];
+
+    const defaultPayload = {
+      mode: "cylinder",
+      start,
+      end,
+      interval: "5m",
+      metrics: defaultMetrics,
+    };
+
+    setMode("cylinder");
+    setPayload(defaultPayload);
+    // fetch will be triggered by payload effect below
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Fetch trends when payload changes
   useEffect(() => {
     if (payload) fetchTrends(payload);
   }, [payload, fetchTrends]);
@@ -64,11 +89,11 @@ export default function CPMTrendsPage() {
 
   const title = useMemo(() => {
     if (!payload) return "CPM Trends";
-    return `CPM Trends • ${payload.mode.toUpperCase()}`;
+    return `CPM Trends • ${payload.mode?.toUpperCase()}`;
   }, [payload]);
 
   return (
-    <div className="min-h-screen w-full bg-background text-foreground p-6 space-y-6">
+    <div className="min-h-screen bg-background text-foreground p-6 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">{title}</h1>
         <div className="flex items-center gap-4">
@@ -80,8 +105,6 @@ export default function CPMTrendsPage() {
             />
             <span className="text-sm">Auto-refresh</span>
           </label>
-                {/* ✅ Back Button */}
-    <BackToCPMButton />
           <div className="text-sm">
             {busy ? (
               <span className="text-muted-foreground">Loading…</span>
@@ -94,7 +117,8 @@ export default function CPMTrendsPage() {
 
       <TabsNav active={mode} onChange={setMode} />
 
-      <FiltersPanel mode={mode} onApply={applyFilters} />
+      {/* FiltersPanel now accepts a defaultPayload prop and emits onApply */}
+      <FiltersPanel mode={mode} onApply={applyFilters} defaultPayload={payload} />
 
       <TrendChart data={data} />
     </div>

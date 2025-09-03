@@ -13,6 +13,7 @@ import {
   Tooltip,
 } from "recharts";
 import BulletBar from "@/components/charts/BulletBar";
+import { useRouter } from "next/navigation";
 
 // ------- Donut Gauge (Animated CPM KPIs) -------
 function DonutGauge({ label, value = 0, max = 100, unit = "", colorVar = "--chart-1" }) {
@@ -126,7 +127,6 @@ export default function Unit1Dashboard() {
     return () => clearInterval(id);
   }, []);
 
-  // Always define useMemo hooks before conditional rendering
   const topCylinders = useMemo(() => {
     const keys = Object.keys(cpm.cylinders || {})
       .sort((a, b) => parseInt(a.split("_")[1] || "0") - parseInt(b.split("_")[1] || "0"))
@@ -136,6 +136,7 @@ export default function Unit1Dashboard() {
       name: k.replace("_", " "),
       suction: cpm.cylinders[k]?.head_end?.Suction_Pressure_psi ?? 0,
       discharge: cpm.cylinders[k]?.head_end?.Discharge_Pressure_psi ?? 0,
+      volume: cpm.cylinders[k]?.Actual_Cylinder_Volume ?? 0,
     }));
   }, [cpm]);
 
@@ -146,7 +147,6 @@ export default function Unit1Dashboard() {
       .slice(0, 3);
   }, [vm.channels]);
 
-  // Now it's safe to do conditional rendering
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[70vh]">
@@ -161,6 +161,8 @@ export default function Unit1Dashboard() {
   const SUCT_MAX = 300;
   const DISC_MAX = 600;
 
+  const router = useRouter();
+
   return (
     <div className="p-6 space-y-6">
       {/* Header */}
@@ -168,8 +170,12 @@ export default function Unit1Dashboard() {
         <h1 className="text-2xl font-bold tracking-wide">Unit 1 — Advanced Overview</h1>
         <div className="flex items-center gap-3">
           <span className="text-xs text-muted-foreground">Updated: {updatedAt}</span>
-          <Button variant="secondary" onClick={() => (window.location.href = "/(main)/cpm")}>CPM Dashboard</Button>
-          <Button variant="secondary" onClick={() => (window.location.href = "/(main)/vm")}>VM Dashboard</Button>
+          <Button variant="secondary" onClick={() => router.push("/cpm")}>
+            CPM Dashboard
+          </Button>
+          <Button variant="secondary" onClick={() => router.push("/vm")}>
+            VM Dashboard
+          </Button>
         </div>
       </div>
 
@@ -193,7 +199,7 @@ export default function Unit1Dashboard() {
         {/* RIGHT: Cylinders + Top3 VM */}
         <Card className="shadow-md">
           <CardHeader className="pb-2">
-            <CardTitle className="text-lg">CPM Cylinders & VM Top Channels</CardTitle>
+            <CardTitle className="text-lg">CPM Cylinders & VM Critical Channels</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             {/* Top Cylinders */}
@@ -227,9 +233,15 @@ export default function Unit1Dashboard() {
                         }}
                       />
                     </div>
-                    <div className="mt-2 text-xs text-muted-foreground flex justify-between">
+                    <div className="mt-2 text-xs flex justify-between">
                       <span>{cyl.suction?.toFixed ? cyl.suction.toFixed(1) : cyl.suction} psi</span>
                       <span>{cyl.discharge?.toFixed ? cyl.discharge.toFixed(1) : cyl.discharge} psi</span>
+                    </div>
+
+                    {/* NEW: Actual Cylinder Volume */}
+                    <div className="mt-3 text-xs text-muted-foreground">
+                      <span className="font-medium">Volume: </span>
+                      {cyl.volume?.toFixed ? cyl.volume.toFixed(2) : cyl.volume} L
                     </div>
                   </div>
                 </div>
@@ -241,7 +253,6 @@ export default function Unit1Dashboard() {
             <div className="grid grid-cols-1 gap-3">
               {top3VM.map((ch) => (
                 <div key={ch.channel}>
-                 
                   <BulletBar
                     label={`${ch.label} (Ch ${ch.channel})`}
                     value={ch.overall}
