@@ -8,6 +8,8 @@ import FFTRMSChart from "@/components/FFTRMSChart";
 import BiasVoltageChart from "@/components/BiasVoltageChart";
 import RodDropChart from "@/components/RodDropChart";
 import RPMChart from "@/components/RPMChart";
+import BackToVMButton from "@/components/BackToVMButton";  // ✅ NEW
+
 
 export default function ChannelPage() {
   const { channel } = useParams();
@@ -21,7 +23,13 @@ export default function ChannelPage() {
   const hasRod = chNum >= 9 && chNum <= 12;
 
   return (
-    <div className="p-8 space-y-12 min-h-screen w-full">
+     <div className="p-8 space-y-12 min-h-screen w-full">
+      {/* Header with Back Button */}
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold">Channel {channel}</h1>
+        <BackToVMButton />
+      </div>
+      
       {isRPM && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <RPMChart channel={channel} liveData={liveData} />

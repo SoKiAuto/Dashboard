@@ -133,6 +133,6 @@ async function pollSentinelVM() {
       }
     }
   }, POLL_INTERVAL);
-}
+} 
 
 module.exports = pollSentinelVM;

@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LiveContext } from "@/context/liveContext";
 import { Badge } from "@/components/ui/badge";
+import BackToCPMButton from "@/components/cpm/BackToCPMButton";  // ✅ NEW
+
 
 export default function ChannelLayout({ children }) {
   const { channel } = useParams();
@@ -44,7 +46,9 @@ export default function ChannelLayout({ children }) {
 
   return (
     <LiveContext.Provider value={{ liveData, setpoints }}>
+      
       <div className="px-8 py-6 space-y-6 w-full">
+        
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-4">
           <div>
             <h1 className="text-2xl font-bold">Channel {channel}</h1>
