@@ -105,6 +105,7 @@ export default function SentinelCPMPage() {
             </Button>
           </Link>
 
+          
           <Link href="/cpm/setpoints">
             <Button variant="outline">
               <Settings className="w-4 h-4 mr-2" /> Setpoints

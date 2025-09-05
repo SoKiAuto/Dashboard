@@ -132,3 +132,16 @@
 }
 
 
+
+/* Tooltip fixes for ApexCharts */
+.apexcharts-tooltip {
+  background: hsl(var(--background)) !important; /* Tailwind background */
+  color: hsl(var(--foreground)) !important;      /* Tailwind text */
+  border-radius: 0.5rem !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+.apexcharts-tooltip-title {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--foreground)) !important;
+}

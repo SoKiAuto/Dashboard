@@ -23,7 +23,9 @@ import {
   ResponsiveContainer,
   Tooltip
 } from "recharts";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
+
+import DeviceStatus from "@/components/DeviceStatus";;
 
 // ---------------- Skeleton Loader ----------------
 const SkeletonCard = () => (
@@ -93,7 +95,7 @@ export default function UnitsPage() {
             Live: {overallStats.live}
           </div>
           <div className="px-4 py-2 rounded-lg shadow bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300">
-            Mock: {overallStats.mock}
+            offline: {overallStats.mock}
           </div>
         </div>
       </div>
@@ -124,7 +126,7 @@ export default function UnitsPage() {
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
             >
-              {f === "all" ? "All Units" : f === "live" ? "Live" : "Mock"}
+              {f === "all" ? "All Units" : f === "live" ? "Live" : "offline"}
             </Button>
           ))}
         </div>
@@ -165,7 +167,7 @@ export default function UnitsPage() {
                           : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300"
                       }`}
                     >
-                      {unit.dataSource === "live" ? "Live" : "Mock"}
+                      {unit.dataSource === "live" ? "Live" : "offline"}
                     </span>
                   </CardHeader>
 
@@ -203,19 +205,26 @@ export default function UnitsPage() {
                     
 
                     {/* View Details */}
-                    <div className="mt-5">
-                      {unit.name === "Unit 1" ? (
-                        <Link href="/units/unit1">
-                          <Button className="w-full bg-blue-600 hover:bg-blue-700 transition-all">
-                            View Details
+                    {/* View Details + Device Status */}
+                      <div className="mt-5 space-y-3 flex flex-col gap-3 ">
+                        {unit.name === "Unit 1" ? (
+                          <>
+                            <Link href="/units/unit1">
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700 transition-all ">
+                                View Details
+                              </Button>
+                            </Link>
+
+                            {/* ✅ DeviceStatus only for Unit 1
+                            <DeviceStatus  /> */}
+                          </>
+                        ) : (
+                          <Button className="w-full" disabled>
+                            Not Available
                           </Button>
-                        </Link>
-                      ) : (
-                        <Button className="w-full" disabled>
-                          Not Available
-                        </Button>
-                      )}
-                    </div>
+                        )}
+                      </div>
+
                   </CardContent>
                 </Card>
               </motion.div>

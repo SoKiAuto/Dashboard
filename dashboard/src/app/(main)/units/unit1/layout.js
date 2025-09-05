@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { LiveContext } from "@/context/liveContext";
 import { Badge } from "@/components/ui/badge";
 
+import DeviceStatus from "@/components/DeviceStatus";
+
 export default function CylinderLayout({ children }) {
   const { cylinder } = useParams();
   const [liveData, setLiveData] = useState(null);
@@ -32,16 +34,21 @@ export default function CylinderLayout({ children }) {
   return (
     <LiveContext.Provider value={{ liveData }}>
       <div className="px-8 py-6 space-y-6 w-full">
+        
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-4">
           <div>
             <h1 className="text-2xl font-bold">Unit {cylinder}</h1>
             <p className="text-sm text-muted-foreground">Unit Dashboard</p>
           </div>
+          
           <div className="flex flex-wrap gap-2">
             <Badge variant="secondary">
               Updated {timestamp}
             </Badge>
+            
+         
+
           </div>
         </div>
 

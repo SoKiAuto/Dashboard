@@ -107,14 +107,24 @@ export default function TrendChart({ data, theme = "light" }) {
     legend: {
       show: false, // We use a custom legend below the chart
     },
-    tooltip: {
-      shared: true,
-      theme: theme === "dark" ? "dark" : "light",
-      x: { format: "dd MMM yyyy HH:mm:ss" },
-      y: {
-        formatter: (val) => val.toFixed(2),
-      },
-    },
+   tooltip: {
+  shared: true,
+  theme: theme === "dark" ? "dark" : "light",
+  x: { format: "dd MMM yyyy HH:mm:ss" },
+  y: {
+    formatter: (val) => val.toFixed(2),
+  },
+  style: {
+    fontSize: "12px",
+    color: theme === "dark" ? "#f9fafb" : "#111827", // text color
+  },
+  fillSeriesColor: false,
+  marker: {
+    show: true,
+  },
+  custom: undefined, // keep default layout
+},
+
     grid: {
       borderColor: theme === "dark" ? "#333" : "#e5e5e5",
     },

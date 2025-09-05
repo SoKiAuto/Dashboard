@@ -99,9 +99,12 @@ export default function CPMSetpointsPage() {
   if (loading || !data) return <p className="p-4">Loading...</p>;
 
   return (
-    <div className="p-4 space-y-6 min-h-screen w-full">
-            {/* ✅ Back Button */}
-    <BackToCPMButton />
+   <div className="p-4 space-y-6 min-h-screen w-full">
+         {/* Header with Back button */}
+         <div className="flex justify-between items-center">
+           <h1 className="text-2xl font-bold">Setpoint Configuration</h1>
+           <BackToCPMButton /> {/* ✅ Back button on right */}
+         </div>
       <h1 className="text-2xl font-bold">CPM Setpoint Configuration</h1>
       
       <Tabs defaultValue="unit">

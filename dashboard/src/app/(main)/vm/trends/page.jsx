@@ -7,6 +7,7 @@ import {
   ChartBarIcon,
   ClockIcon,
 } from "@heroicons/react/24/outline";
+import BackToVMButton from "@/components/BackToVMButton";
 
 const Chart = dynamic(() => import("@/components/TrendChart"), { ssr: false });
 
@@ -99,7 +100,12 @@ export default function VMDashboard() {
   }, [selectedChannels, selectedMetric, customFrom, customTo]);
 
   return (
-    <div className="p-8 space-y-4 min-h-screen w-full">
+   <div className="p-8 space-y-4 min-h-screen w-full">
+      {/* Header with Back button */}
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">VM Dashboard</h1>
+        <BackToVMButton /> {/* ✅ Back to VM overview */}
+      </div>
       {/* Top bar */}
       <div className="flex flex-wrap justify-between items-center gap-4 border-b border-border pb-3">
         <div className="flex items-center gap-4">
@@ -127,17 +133,20 @@ export default function VMDashboard() {
             <ChartBarIcon className="h-5 w-5 inline-block mr-1 text-muted-foreground" />
             Parameter:
           </label>
-          <select
-            value={selectedMetric}
-            onChange={(e) => setSelectedMetric(e.target.value)}
-            className="border border-border rounded px-4 py-1"
-          >
-            {metrics.map((m) => (
-              <option key={m.value} value={m.value}>
-                {m.label}
-              </option>
-            ))}
-          </select>
+         <select
+          value={selectedMetric}
+          onChange={(e) => setSelectedMetric(e.target.value)}
+          className="border border-border rounded px-4 py-1 
+                    bg-[var(--background)] text-[var(--foreground)] 
+                    focus:ring-2 focus:ring-[var(--ring)]"
+        >
+          {metrics.map((m) => (
+            <option key={m.value} value={m.value}>
+              {m.label}
+            </option>
+          ))}
+        </select>
+
         </div>
 
         <div>

@@ -17,17 +17,17 @@ export default function VMChannelTile_RMSBias({ data }) {
   // Determine status-based styling for the Overall RMS badge and card border
   // Replaced yellow/orange with a neutral dark gray for the warning state
   const statusClass =
-    Overall_RMS > 20
+    Overall_RMS >10.60
       ? "bg-destructive border-destructive text-destructive-foreground shadow-lg shadow-destructive/40" // Red for critical
-      : Overall_RMS > 10
+      : Overall_RMS > 1
       ? "bg-gray-700 border-gray-700 text-white shadow-lg shadow-gray-700/40" // Dark Gray for warning (neutral)
       : "bg-green-600 border-green-700 text-white shadow-lg shadow-green-500/40"; // Green for normal
 
   // Card border class: Uses the same colors as the badge for consistency
   const cardBorderClass =
-    Overall_RMS > 20
+    Overall_RMS > 10.69
       ? "border-destructive"
-      : Overall_RMS > 10
+      : Overall_RMS > 1
       ? "border-gray-700" // Dark Gray border for warning
       : "border-green-600";
 

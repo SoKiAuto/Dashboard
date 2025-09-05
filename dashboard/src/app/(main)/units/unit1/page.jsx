@@ -14,6 +14,8 @@ import {
 } from "recharts";
 import BulletBar from "@/components/charts/BulletBar";
 import { useRouter } from "next/navigation";
+import DeviceStatus from "@/components/DeviceStatus";
+
 
 // ------- Donut Gauge (Animated CPM KPIs) -------
 function DonutGauge({ label, value = 0, max = 100, unit = "", colorVar = "--chart-1" }) {
@@ -27,6 +29,9 @@ function DonutGauge({ label, value = 0, max = 100, unit = "", colorVar = "--char
   );
 
   const COLORS = [`var(${colorVar})`, "color-mix(in oklch, var(--muted) 85%, black 0%)"];
+
+
+
 
   return (
     <Card className="shadow-lg border border-border">
@@ -80,6 +85,8 @@ export default function Unit1Dashboard() {
   const [cpm, setCPM] = useState({ rpm: 0, hp: 0, suction: 0, discharge: 0, cylinders: {} });
   const [loading, setLoading] = useState(true);
   const [updatedAt, setUpdatedAt] = useState("");
+
+    const router = useRouter(); 
 
   useEffect(() => {
     async function fetchData() {
@@ -161,7 +168,7 @@ export default function Unit1Dashboard() {
   const SUCT_MAX = 300;
   const DISC_MAX = 600;
 
-  const router = useRouter();
+  
 
   return (
     <div className="p-6 space-y-6">
@@ -175,8 +182,11 @@ export default function Unit1Dashboard() {
           </Button>
           <Button variant="secondary" onClick={() => router.push("/vm")}>
             VM Dashboard
+            
           </Button>
+
         </div>
+        
       </div>
 
       {/* Row: CPM Gauges + Right combined card */}

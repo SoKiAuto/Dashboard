@@ -34,7 +34,7 @@ export default async function RootLayout({ children }) {
         <sessionwrapper>
           <SidebarProvider defaultOpen={defaultOpen}>
             <AppSidebar />
-            <ThemeProvider
+            <ThemeProvider  
               attribute="class"
               defaultTheme={theme}
               enableSystem

@@ -1,9 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import MarkerClusterGroup from "react-leaflet-markercluster";
+import dynamic from "next/dynamic";
+
+// Dynamically import react-leaflet components (client-side only)
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((m) => m.MapContainer),
+  { ssr: false }
+);
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((m) => m.TileLayer),
+  { ssr: false }
+);
+const Marker = dynamic(
+  () => import("react-leaflet").then((m) => m.Marker),
+  { ssr: false }
+);
+const Popup = dynamic(
+  () => import("react-leaflet").then((m) => m.Popup),
+  { ssr: false }
+);
+const MarkerClusterGroup = dynamic(
+  () => import("react-leaflet-markercluster"),
+  { ssr: false }
+);
+
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,8 +57,8 @@ const sites = [
         id: "unit1",
         name: "Unit 1 (Real Data)",
         devices: [
-          { id: "vm-1", type: "VM", status: "Active" },
-          { id: "cpm-1", type: "CPM", status: "Active" },
+          { id: "vm-1", dbId: "sentinel-vm", type: "VM" },
+          { id: "cpm-1", dbId: "sentinel-cpm", type: "CPM" },
         ],
       },
       {
@@ -99,6 +121,30 @@ const sites = [
 
 export default function Dashboard() {
   const [selectedSite, setSelectedSite] = useState(null);
+  const [deviceStatuses, setDeviceStatuses] = useState({}); // dbId -> "online"/"offline"
+
+  // fetch device statuses from API
+  useEffect(() => {
+    async function fetchStatuses() {
+      try {
+        const res = await fetch("/api/devices/status");
+        const data = await res.json();
+        if (data.success) {
+          const statusMap = {};
+          data.devices.forEach((dev) => {
+            statusMap[dev.deviceId] = dev.status; // e.g., "online"
+          });
+          setDeviceStatuses(statusMap);
+        }
+      } catch (err) {
+        console.error("Failed to fetch statuses", err);
+      }
+    }
+
+    fetchStatuses();
+    const interval = setInterval(fetchStatuses, 10000); // refresh every 10s
+    return () => clearInterval(interval);
+  }, []);
 
   // Calculate totals
   const totalSites = sites.length;
@@ -164,36 +210,44 @@ export default function Dashboard() {
                 <TableBody>
                   {sites.map((site) =>
                     site.units.map((unit) =>
-                      unit.devices.map((device) => (
-                        <TableRow key={device.id}>
-                          <TableCell>{site.name}</TableCell>
-                          <TableCell>{unit.name}</TableCell>
-                          <TableCell>{device.type}</TableCell>
-                          <TableCell>
-                            {device.status === "Active" ? (
-                              <span className="text-green-500">Active</span>
-                            ) : (
-                              <span className="text-red-500">Offline</span>
-                            )}
-                          </TableCell>
-                          <TableCell>
-                            {unit.id === "unit1" ? (
-                              <Link href="/units/unit1">
-                                <button className="px-3 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                                  View
+                      unit.devices.map((device) => {
+                        // Use live status when dbId is present; else fall back to mock status
+                        const isOnline =
+                          device.dbId
+                            ? deviceStatuses[device.dbId] === "online"
+                            : device.status === "Active";
+
+                        return (
+                          <TableRow key={device.id}>
+                            <TableCell>{site.name}</TableCell>
+                            <TableCell>{unit.name}</TableCell>
+                            <TableCell>{device.type}</TableCell>
+                            <TableCell>
+                              {isOnline ? (
+                                <span className="text-green-500">Active</span>
+                              ) : (
+                                <span className="text-red-500">Offline</span>
+                              )}
+                            </TableCell>
+                            <TableCell>
+                              {unit.id === "unit1" ? (
+                                <Link href="/units/unit1">
+                                  <button className="px-3 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                    View
+                                  </button>
+                                </Link>
+                              ) : (
+                                <button
+                                  className="px-3 py-1 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed"
+                                  disabled
+                                >
+                                  N/A
                                 </button>
-                              </Link>
-                            ) : (
-                              <button
-                                className="px-3 py-1 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed"
-                                disabled
-                              >
-                                N/A
-                              </button>
-                            )}
-                          </TableCell>
-                        </TableRow>
-                      ))
+                              )}
+                            </TableCell>
+                          </TableRow>
+                        );
+                      })
                     )
                   )}
                 </TableBody>

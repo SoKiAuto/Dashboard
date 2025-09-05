@@ -18,7 +18,7 @@ export default function VMChannelTile_RMSRodDrop({ data }) {
   // Determine status-based styling for the Overall RMS badge and card border
   // Using neutral dark gray for the warning state (Overall_RMS > 10)
   const statusClass =
-    Overall_RMS > 20
+    Overall_RMS > 11
       ? "bg-destructive border-destructive text-destructive-foreground shadow-lg shadow-destructive/40" // Red for critical
       : Overall_RMS > 10
       ? "bg-gray-700 border-gray-700 text-white shadow-lg shadow-gray-700/40" // Dark Gray for warning (neutral)
@@ -26,7 +26,7 @@ export default function VMChannelTile_RMSRodDrop({ data }) {
 
   // Card border class: Uses the same colors as the badge for consistency
   const cardBorderClass =
-    Overall_RMS > 20
+    Overall_RMS > 11
       ? "border-destructive"
       : Overall_RMS > 10
       ? "border-gray-700" // Dark Gray border for warning

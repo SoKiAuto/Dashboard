@@ -154,7 +154,7 @@ const mockDoc = {
 /** -----------------------------
  * SIMPLE HELPERS
  * -------------------------------- */
-const hpRisk = (hp) => (hp > 800 ? 3 : hp > 500 ? 2 : hp > 200 ? 1 : 0);
+const hpRisk = (hp) => (hp > 22200 ? 3 : hp > 2500 ? 2 : hp > 1200 ? 1 : 0);
 const pressRisk = (dis, suc) => (dis > 390 ? 3 : dis > 350 ? 2 : dis > 300 ? 1 : 0) + (suc < 150 ? 1 : 0);
 const veRisk = (ve) => (ve === 0 ? 2 : ve < 35 ? 2 : ve < 50 ? 1 : 0);
 const flowBalRisk = (fb) => (fb === 0 ? 1 : fb < 0.9 || fb > 1.1 ? 1 : 0);

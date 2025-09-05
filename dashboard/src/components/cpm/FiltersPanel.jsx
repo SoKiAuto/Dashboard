@@ -120,7 +120,9 @@ export default function FiltersPanel({ mode, onApply }) {
         </div>
 
         <span className="ml-4 text-sm font-semibold">Interval</span>
-        <select className="border rounded px-3 py-2" value={interval} onChange={(e) => setInterval(e.target.value)}>
+        <select className="border border-border rounded px-4 py-1 
+                    bg-[var(--background)] text-[var(--foreground)] 
+                    focus:ring-2 focus:ring-[var(--ring)]" value={interval} onChange={(e) => setInterval(e.target.value)}>
           <option value="1m">1 min</option>
           <option value="5m">5 min</option>
           <option value="15m">15 min</option>
@@ -179,7 +181,9 @@ export default function FiltersPanel({ mode, onApply }) {
 
           <div>
             <span className="text-sm font-semibold mr-2">Metric</span>
-            <select className="border rounded px-3 py-2 min-w-56" value={metricSel} onChange={(e) => setMetricSel(e.target.value)}>
+            <select className="border border-border rounded px-4 py-1 
+                    bg-[var(--background)] text-[var(--foreground)] 
+                    focus:ring-2 focus:ring-[var(--ring)]" value={metricSel} onChange={(e) => setMetricSel(e.target.value)}>
               {metricsOptions.map((m) => (
                 <option key={m.path} value={m.path}>{m.label}</option>
               ))}
@@ -213,7 +217,9 @@ function PickCard({ title, pick, setPick }) {
       <div className="mb-2 text-sm font-semibold">{title} series</div>
       <div className="flex flex-wrap gap-2 items-center">
         <select
-          className="border rounded px-3 py-2"
+          className="border border-border rounded px-4 py-1 
+                    bg-[var(--background)] text-[var(--foreground)] 
+                    focus:ring-2 focus:ring-[var(--ring)]"
           value={pick.type}
           onChange={(e) => setPick((p) => ({ ...p, type: e.target.value }))}
         >
@@ -224,7 +230,9 @@ function PickCard({ title, pick, setPick }) {
 
         {(pick.type === "stage" || pick.type === "cylinder") && (
           <select
-            className="border rounded px-3 py-2"
+            className="border border-border rounded px-4 py-1 
+                    bg-[var(--background)] text-[var(--foreground)] 
+                    focus:ring-2 focus:ring-[var(--ring)]"
             value={pick.idx}
             onChange={(e) => setPick((p) => ({ ...p, idx: e.target.value }))}
           >
@@ -235,7 +243,9 @@ function PickCard({ title, pick, setPick }) {
         )}
 
         <select
-          className="border rounded px-3 py-2 min-w-56"
+          className="border border-border rounded px-4 py-1 
+                    bg-[var(--background)] text-[var(--foreground)] 
+                    focus:ring-2 focus:ring-[var(--ring)]"
           value={pick.metric}
           onChange={(e) => setPick((p) => ({ ...p, metric: e.target.value }))}
         >

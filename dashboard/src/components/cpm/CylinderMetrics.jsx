@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 const metricsConfig = [
-  { key: "HP", label: "Horsepower", suffix: "", max: 1000 },
+  { key: "HP", label: "Horsepower", suffix: "", max: 2000 },
   { key: "Discharge_Pressure_psi", label: "Discharge Pressure", suffix: " psi", max: 500 },
   { key: "Suction_Pressure_psi", label: "Suction Pressure", suffix: " psi", max: 300 },
   { key: "Cylinder_Flow_MMSCFD", label: "Flow", suffix: " MMSCFD", max: 50 },

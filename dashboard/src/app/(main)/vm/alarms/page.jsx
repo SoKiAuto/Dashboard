@@ -8,6 +8,9 @@ import { DownloadIcon, RefreshCwIcon } from "lucide-react";
 import DataTable from "@/components/ui/data-table";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import BackToVMButton from "@/components/BackToVMButton"; 
+
+
 
 export default function AlarmPage() {
   const [alarms, setAlarms] = useState([]);
@@ -146,6 +149,7 @@ export default function AlarmPage() {
 
   return (
     <div className="p-4 space-y-4 min-h-screen w-full">
+      {/* Header with Back button */}
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-bold">Sentinel-VM Alarms</h2>
         <div className="flex gap-2">
@@ -157,6 +161,7 @@ export default function AlarmPage() {
             <DownloadIcon className="w-4 h-4 mr-1" />
             Export CSV
           </Button>
+          <BackToVMButton /> {/* ✅ Back to VM main page */}
         </div>
       </div>
 

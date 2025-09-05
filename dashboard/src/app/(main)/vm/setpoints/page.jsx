@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import BackToVMButton from "@/components/BackToVMButton";
 
 export default function VMSetpointsPage() {
   const [setpoints, setSetpoints] = useState([]);
@@ -57,8 +58,11 @@ export default function VMSetpointsPage() {
 
   return (
     <div className="p-4 space-y-6 min-h-screen w-full">
-      <h1 className="text-2xl font-bold">Setpoint Configuration</h1>
-
+      {/* Header with Back button */}
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Setpoint Configuration</h1>
+        <BackToVMButton /> {/* ✅ Back button on right */}
+      </div>
       {loading && <p className="text-muted-foreground">Loading...</p>}
 
       <div className="overflow-auto">
