@@ -144,7 +144,7 @@ export default function SentinelCPMPage() {
       {/* Cylinders (big tiles; only key metrics in tile) */}
       {cylinderKeys.length > 0 && (
         <section>
-          <h2 className="text-lg font-semibold mt-6 mb-3">Cylinders</h2>
+          <h2 className="text-lg font-semibold mt-6 mb-4">Cylinders</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {cylinderKeys.map((key) => (
               <CPMCylinderTile key={key} name={key} data={cylinders[key]} />
