@@ -135,7 +135,7 @@ export default function PVPTCurvePage() {
     <main className="p-4 space-y-6 min-h-screen w-full bg-background text-foreground">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <h1 className="text-2xl font-bold flex items-center gap-2">
-          <TrendingUp className="w-6 h-6 text-primary" />
+          <TrendingUp className="w-6 h-7 text-primary" />
           PV / PT Curve (Live Data)
         </h1>
 
