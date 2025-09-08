@@ -132,7 +132,7 @@ export default function PVPTCurvePage() {
   }, [curveData, selectedCylinder, selectedCurve, selectedEnd, overlayType]);
 
   return (
-    <main className="p-1 space-y-6 min-h-screen w-full bg-background text-foreground">
+    <main className="p-4 space-y-6 min-h-screen w-full bg-background text-foreground">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <h1 className="text-2xl font-bold flex items-center gap-2">
           <TrendingUp className="w-6 h-6 text-primary" />
