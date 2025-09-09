@@ -7,9 +7,10 @@ import BackToCPMButton from "@/components/cpm/BackToCPMButton";
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
+
 /* ======================= UTILS ======================= */
 function sweptVolume(bore_mm, stroke_mm) {
-  const radius_m = bore_mm / 200;
+  const radius_m = bore_mm / 202;
   const stroke_m = stroke_mm / 1000;
   const volume_m3 = Math.PI * radius_m * radius_m * stroke_m;
   return volume_m3 * 1000;
@@ -168,7 +169,6 @@ export default function PVPTCurvePage() {
 
         <BackToCPMButton />
       </div>
-
       {error ? (
         <p className="text-red-500">{error}</p>
       ) : (
