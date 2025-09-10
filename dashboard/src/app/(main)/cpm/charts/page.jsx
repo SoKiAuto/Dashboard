@@ -53,7 +53,7 @@ export default function PVPTCurvePage() {
 
     const headColor = getCSSVar("--pvpt-head-color") || "#00f5ff";
     const crankColor = getCSSVar("--pvpt-crank-color") || "#ff007f";
-    const textColor = getCSSVar("--pvpt-text") || "#222";
+    const textColor = getCSSVar("--pvpt-text") || "#122";
     const gridColor = getCSSVar("--pvpt-grid") || "#ccc";
     const tooltipBg = getCSSVar("--pvpt-tooltip-bg") || "#fff";
     const tooltipText = getCSSVar("--pvpt-tooltip-text") || "#000";
