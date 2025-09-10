@@ -7,8 +7,10 @@ const CPMhistoryService = require("./CPMhistoryService");
 const CPMalarmService = require("./CPMalarmService");
 
 const SOCKET_URL = config.CPM_SOCKET_URL || "http://172.16.0.1:10001";
+const POLL_INTERVAL = config.LIVE_POLL_INTERVAL || 5000; // every 5 seconds
 
 let socket = null;
+let latestSnapshot = {}; // store latest metrics
 
 const startCPMSocketService = () => {
   logger.info(`🔌 Connecting to Sentinel CPM via Socket.IO @ ${SOCKET_URL} ...`);
@@ -20,49 +22,64 @@ const startCPMSocketService = () => {
     reconnectionAttempts: Infinity,
   });
 
-  // On connection success
   socket.on("connect", () => {
     logger.success(`✅ Connected to Sentinel CPM @ ${SOCKET_URL}`);
   });
 
-  // On disconnect
   socket.on("disconnect", () => {
     logger.warn("⚠️ Disconnected from CPM Socket.IO, retrying...");
   });
 
-  // On connection error
   socket.on("connect_error", (err) => {
     logger.error(`❌ CPM Socket.IO Connection Failed: ${err.message}`);
   });
 
-  // Listen to all incoming events
+  // Handle all incoming socket events
   socket.onAny(async (event, data) => {
     try {
       logger.info(`📡 Event: ${event} received`);
 
-      const deviceId = "CPM-001"; // Later we make this dynamic if multiple devices
-
-      // Prepare structured live data
+      const deviceId = data?.deviceId || data?.serialNo || "CPM-001";
       const structuredData = prepareStructuredData(event, data, deviceId);
 
-      // 1. Update Live Data
-      if (structuredData) {
-        await CPMliveService.updateLiveData(deviceId, structuredData);
-      }
+      if (!structuredData) return;
 
-      // 2. Save history snapshot
+      // Save the latest snapshot for continuous polling
+      latestSnapshot[deviceId] = {
+        ...(latestSnapshot[deviceId] || {}),
+        ...structuredData,
+      };
+
+      // Update live data immediately
+      await CPMliveService.updateLiveData(deviceId, structuredData);
+
+      // Store historical snapshot if enabled
       await CPMhistoryService.queueHistoryData(deviceId, structuredData);
 
-      // 3. Check alarms
+      // Check alarms based on thresholds
       await CPMalarmService.checkAlarms(deviceId, structuredData);
-
     } catch (err) {
       logger.error(`❌ Error processing CPM event: ${err.message}`);
     }
   });
+
+  // Start continuous polling every 5 seconds
+  setInterval(async () => {
+    try {
+      const deviceId = "CPM-001";
+      const snapshot = latestSnapshot[deviceId];
+
+      if (snapshot) {
+        await CPMliveService.updateLiveData(deviceId, snapshot);
+        logger.info(`🔄 Continuous live data refreshed for ${deviceId}`);
+      }
+    } catch (err) {
+      logger.error(`❌ Error in continuous polling: ${err.message}`);
+    }
+  }, POLL_INTERVAL);
 };
 
-// Helper: Convert raw socket data into structured object
+// Helper: Prepare structured data from raw socket events
 const prepareStructuredData = (event, data, deviceId) => {
   const structured = { deviceId };
 
@@ -75,20 +92,38 @@ const prepareStructuredData = (event, data, deviceId) => {
       };
       break;
 
-    case "newCurve":
-      structured.curveData = {
-        lastUpdated: new Date(),
-        CETheoretical: data.CETheoretical || [],
-        CERaw: data.CERaw || [],
-        CESmoothed: data.CESmoothed || [],
-        HERaw: data.HERaw || [],
-        HESmoothed: data.HESmoothed || [],
+    case "modbusData":
+      structured.compressorData = {
+        ...(structured.compressorData || {}),
+        registers: data.registers || [],
       };
       break;
 
+      
+case "newCurve":
+  console.log("🎯 NEW CURVE RAW DATA:", data);
+
+  // Always ensure cylinders array
+  const cylinders = Array.isArray(data) ? data : [data];
+
+  structured.curveData = {
+    lastUpdated: new Date(),
+    cylinders: cylinders.map((cylinder) => ({
+      CERaw: cylinder?.CERaw || [],
+      CESmoothed: cylinder?.CESmoothed || [],
+      CETheoretical: cylinder?.CETheoretical || [],
+      HERaw: cylinder?.HERaw || [],
+      HESmoothed: cylinder?.HESmoothed || [],
+      HETheoretical: cylinder?.HETheoretical || [],
+    })),
+  };
+  break;
+
+
+
     case "systemStatus":
       structured.status = {
-        online: data.online ?? true,
+        online: true,
         lastSeen: new Date(),
         systemStatus: data,
       };
@@ -97,11 +132,13 @@ const prepareStructuredData = (event, data, deviceId) => {
     case "updatePrimary":
       structured.deviceInfo = {
         role: data.role || "Primary",
+        name: data.deviceName || "CPM Device",
+        serialNumber: data.serialNo || null,
+        ipAddress: data.ip || SOCKET_URL,
       };
       break;
 
     default:
-      // Ignore unknown events for now
       return null;
   }
 

@@ -13,27 +13,49 @@ class CPMliveService {
         logger.warn("⚠️ Missing deviceId or structuredData in updateLiveData()");
         return;
       }
+      if (structuredData.curveData) {
+  logger.info(
+    `📊 Saving curveData for ${deviceId} | Cylinders: ${structuredData.curveData.cylinders?.length}`
+  );
+}
 
-      // Build update object
+
+      // Fetch existing data if present
+      const existingData = await CPMLiveData.findOne({ deviceId }).lean();
+
+      // ✅ Smart merge: combine old + new data without losing any fields
       const updateData = {
         deviceId,
-        deviceInfo: structuredData.deviceInfo || {},
-        compressorData: structuredData.compressorData || {},
-        status: structuredData.status || {},
-        curveData: structuredData.curveData || {},
-      };
+        deviceInfo: {
+          ...(existingData?.deviceInfo || {}),
+          ...(structuredData.deviceInfo || {}),
+          lastUpdated: new Date(),
+        },
+        compressorData: {
+          ...(existingData?.compressorData || {}),
+          ...(structuredData.compressorData || {}),
+        },
+        status: {
+          ...(existingData?.status || {}),
+          ...(structuredData.status || {}),
+          lastSeen: structuredData?.status
+            ? new Date()
+            : existingData?.status?.lastSeen || null,
+        },
 
-      // Always update lastSeen and lastUpdated
-      updateData.status = {
-        ...updateData.status,
-        lastSeen: new Date(),
-      };
-      updateData.deviceInfo = {
-        ...updateData.deviceInfo,
+
+        curveData:
+  structuredData.curveData && structuredData.curveData.cylinders?.length
+    ? {
         lastUpdated: new Date(),
+        cylinders: structuredData.curveData.cylinders,
+      }
+    : existingData?.curveData || {},
+
+
       };
 
-      // Upsert the live data for this device
+      // ✅ Insert or update
       const result = await CPMLiveData.findOneAndUpdate(
         { deviceId },
         { $set: updateData },

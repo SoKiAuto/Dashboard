@@ -5,27 +5,8 @@ import dynamic from "next/dynamic";
 import { TrendingUp } from "lucide-react";
 import BackToCPMButton from "@/components/cpm/BackToCPMButton";
 
-const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+const ReactECharts = dynamic(() => import("echarts-for-react"), { ssr: false });
 
-
-/* ======================= UTILS ======================= */
-function sweptVolume(bore_mm, stroke_mm) {
-  const radius_m = bore_mm / 200;
-  const stroke_m = stroke_mm / 1000;
-  const volume_m3 = Math.PI * radius_m * radius_m * stroke_m;
-  return volume_m3 * 1000;
-}
-function volume(theta, clearance_pct, bore_mm, stroke_mm) {
-  const Vs = sweptVolume(bore_mm, stroke_mm);
-  const Vc = Vs * (clearance_pct / 100);
-  return Vc + (Vs / 2) * (1 - Math.cos((theta * Math.PI) / 180));
-}
-function getCSSVar(name) {
-  if (typeof window === "undefined") return "";
-  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-}
-
-/* ======================= MAIN ======================= */
 export default function PVPTCurvePage() {
   const [curveData, setCurveData] = useState(null);
   const [selectedCylinder, setSelectedCylinder] = useState(1);
@@ -33,6 +14,7 @@ export default function PVPTCurvePage() {
   const [selectedEnd, setSelectedEnd] = useState("both");
   const [overlayType, setOverlayType] = useState("None");
   const [error, setError] = useState(null);
+  const [chartKey, setChartKey] = useState(0); // ✅ Force chart refresh
 
   useEffect(() => {
     const fetchCurves = async () => {
@@ -49,85 +31,139 @@ export default function PVPTCurvePage() {
     fetchCurves();
   }, []);
 
-  const chartData = useMemo(() => {
-    if (!curveData) return { series: [], options: {} };
+  // ✅ Force refresh chart on selection changes
+  useEffect(() => {
+    setChartKey((prev) => prev + 1);
+  }, [selectedCylinder, selectedCurve, selectedEnd, overlayType]);
+
+  const chartOptions = useMemo(() => {
+    if (!curveData) return {};
+
     const cyl = curveData[selectedCylinder - 1];
-    if (!cyl) return { series: [], options: {} };
+    if (!cyl) return {};
 
-    // Geometry placeholders
-    const bore = 100, stroke = 150, clearance = 5;
     const angles = [...Array(360).keys()];
-
-    const chartColors = [
-      getCSSVar("--chart-1"),
-      getCSSVar("--chart-2"),
-      getCSSVar("--chart-3"),
-      getCSSVar("--chart-4"),
-    ];
-
     const series = [];
-    const addSeries = (endLabel, prefix, colorIdx) => {
+
+    // 🎨 Get theme colors from CSS variables
+    const getCSSVar = (varName) =>
+      typeof window !== "undefined"
+        ? getComputedStyle(document.documentElement).getPropertyValue(varName)
+        : "";
+
+    const headColor = getCSSVar("--pvpt-head-color") || "#00f5ff";
+    const crankColor = getCSSVar("--pvpt-crank-color") || "#ff007f";
+    const textColor = getCSSVar("--pvpt-text") || "#222";
+    const gridColor = getCSSVar("--pvpt-grid") || "#ccc";
+    const tooltipBg = getCSSVar("--pvpt-tooltip-bg") || "#fff";
+    const tooltipText = getCSSVar("--pvpt-tooltip-text") || "#000";
+
+    const addSeries = (endLabel, prefix, color) => {
       const rawArr = cyl[`${prefix}Raw`] || [];
-      const rawData = selectedCurve === "PT"
-        ? angles.map((a, i) => ({ x: a, y: rawArr[i] }))
-        : rawArr.map((p, i) => ({ x: volume(i, clearance, bore, stroke), y: p }));
+
+      const rawData =
+        selectedCurve === "PT"
+          ? angles.map((a, i) => [a, rawArr[i]])
+          : rawArr.map((p, i) => [(i / 359) * 100, p]);
 
       series.push({
         name: `${endLabel} Raw`,
+        type: "line",
+        smooth: true,
+        showSymbol: false,
         data: rawData,
-        color: chartColors[colorIdx],
+        lineStyle: { width: 2, color },
       });
 
+      // Overlay data if enabled
       if (overlayType !== "None") {
-        const key = overlayType === "Theoretical" ? `${prefix}Theoretical` : `${prefix}Smoothed`;
+        const key =
+          overlayType === "Theoretical"
+            ? `${prefix}Theoretical`
+            : `${prefix}Smoothed`;
         const arr = cyl[key] || [];
-        const overlayData = selectedCurve === "PT"
-          ? angles.map((a, i) => ({ x: a, y: arr[i] }))
-          : arr.map((p, i) => ({ x: volume(i, clearance, bore, stroke), y: p }));
+
+        const overlayData =
+          selectedCurve === "PT"
+            ? angles.map((a, i) => [a, arr[i]])
+            : arr.map((p, i) => [(i / 359) * 100, p]);
 
         series.push({
           name: `${endLabel} ${overlayType}`,
+          type: "line",
+          smooth: true,
+          showSymbol: false,
           data: overlayData,
-          color: chartColors[colorIdx],
-          dashArray: 6, // dotted
+          lineStyle: { width: 2, type: "dashed", color },
         });
       }
     };
 
-    if (selectedEnd === "head_end" || selectedEnd === "both") addSeries("Head End", "HE", 0);
-    if (selectedEnd === "crank_end" || selectedEnd === "both") addSeries("Crank End", "CE", 1);
+    if (selectedEnd === "head_end" || selectedEnd === "both")
+      addSeries("Head End", "HE", headColor);
+    if (selectedEnd === "crank_end" || selectedEnd === "both")
+      addSeries("Crank End", "CE", crankColor);
 
     return {
+      backgroundColor: "transparent",
+      tooltip: {
+        trigger: "axis",
+        backgroundColor: tooltipBg,
+        borderColor: gridColor,
+        textStyle: { color: tooltipText },
+        formatter: (params) =>
+          params
+            .map(
+              (p) =>
+                `<span style="color:${p.color}">●</span> ${p.seriesName}: <b>${p.value[1].toFixed(
+                  2
+                )}</b>`
+            )
+            .join("<br/>"),
+      },
+      legend: {
+        top: 10,
+        textStyle: { color: textColor },
+      },
+      xAxis: {
+        type: "value",
+        name: selectedCurve === "PV" ? "Cylinder Volume (%)" : "Crank Angle (°)",
+        nameLocation: "middle",
+        nameGap: 40,
+        nameTextStyle: { color: textColor, fontSize: 14 },
+        min: 0,
+        max: selectedCurve === "PV" ? 100 : 360,
+        interval: selectedCurve === "PT" ? 90 : 20,
+        axisLine: { lineStyle: { color: gridColor } },
+        axisLabel: {
+          color: textColor,
+          formatter: (value) =>
+            selectedCurve === "PT" ? `${value}°` : `${value}%`,
+        },
+        splitLine: { show: true, lineStyle: { color: gridColor } },
+      },
+      yAxis: {
+        type: "value",
+        name: "Pressure",
+        nameLocation: "middle",
+        nameGap: 50,
+        nameTextStyle: { color: textColor, fontSize: 14 },
+        axisLine: { lineStyle: { color: gridColor } },
+        axisLabel: { color: textColor },
+        splitLine: { show: true, lineStyle: { color: gridColor } },
+      },
       series,
-      options: {
-        chart: {
-          id: "pvpt-chart",
-          type: "line",
-          zoom: { enabled: true },
-          toolbar: { show: true },
-          background: "transparent",
+      grid: { left: 80, right: 30, top: 60, bottom: 80 },
+      dataZoom: [
+        { type: "inside", throttle: 50 },
+        { type: "slider", show: true },
+      ],
+      toolbox: {
+        show: true,
+        feature: {
+          dataZoom: { yAxisIndex: "none" },
+          saveAsImage: {},
         },
-        stroke: { curve: "smooth", width: 2 },
-        xaxis: {
-          title: {
-            text: selectedCurve === "PV" ? "Cylinder Volume (L)" : "Crank Angle (°)",
-          },
-          min: selectedCurve === "PT" ? 0 : undefined,
-          max: selectedCurve === "PT" ? 360 : undefined,
-          tickAmount: selectedCurve === "PT" ? 12 : undefined, // 0,30,60..360
-        },
-        yaxis: {
-          title: { text: "Pressure" },
-        },
-        tooltip: {
-          theme: "dark",
-          x: {
-            formatter: (val) =>
-              selectedCurve === "PV" ? `${val.toFixed(2)} L` : `${val}°`,
-          },
-          y: { formatter: (val) => Number(val).toFixed(2) },
-        },
-        legend: { position: "top" },
       },
     };
   }, [curveData, selectedCylinder, selectedCurve, selectedEnd, overlayType]);
@@ -140,27 +176,48 @@ export default function PVPTCurvePage() {
           PV / PT Curve (Live Data)
         </h1>
 
+        {/* Controls */}
         <div className="flex gap-2">
-          <select value={selectedCylinder} onChange={(e) => setSelectedCylinder(Number(e.target.value))}
-            className="border p-2 rounded-md bg-card text-card-foreground">
-            {[1,2,3].map(cyl => <option key={cyl} value={cyl}>Cylinder {cyl}</option>)}
+          {/* Cylinder Select */}
+          <select
+            value={selectedCylinder}
+            onChange={(e) => setSelectedCylinder(Number(e.target.value))}
+            className="border p-2 rounded-md bg-card text-card-foreground"
+          >
+            {[1, 2, 3].map((cyl) => (
+              <option key={cyl} value={cyl}>
+                Cylinder {cyl}
+              </option>
+            ))}
           </select>
 
-          <select value={selectedCurve} onChange={(e) => setSelectedCurve(e.target.value)}
-            className="border p-2 rounded-md bg-card text-card-foreground">
+          {/* Curve Type */}
+          <select
+            value={selectedCurve}
+            onChange={(e) => setSelectedCurve(e.target.value)}
+            className="border p-2 rounded-md bg-card text-card-foreground"
+          >
             <option value="PV">P-V Curve</option>
             <option value="PT">P-T Curve</option>
           </select>
 
-          <select value={selectedEnd} onChange={(e) => setSelectedEnd(e.target.value)}
-            className="border p-2 rounded-md bg-card text-card-foreground">
+          {/* End Selection */}
+          <select
+            value={selectedEnd}
+            onChange={(e) => setSelectedEnd(e.target.value)}
+            className="border p-2 rounded-md bg-card text-card-foreground"
+          >
             <option value="both">Both Ends</option>
             <option value="head_end">Head End</option>
             <option value="crank_end">Crank End</option>
           </select>
 
-          <select value={overlayType} onChange={(e) => setOverlayType(e.target.value)}
-            className="border p-2 rounded-md bg-card text-card-foreground">
+          {/* Overlay Type */}
+          <select
+            value={overlayType}
+            onChange={(e) => setOverlayType(e.target.value)}
+            className="border p-2 rounded-md bg-card text-card-foreground"
+          >
             <option value="None">Raw Only</option>
             <option value="Theoretical">Raw + Theoretical</option>
             <option value="Unsmoothed">Raw + Unsmoothed</option>
@@ -169,11 +226,12 @@ export default function PVPTCurvePage() {
 
         <BackToCPMButton />
       </div>
+
       {error ? (
         <p className="text-red-500">{error}</p>
       ) : (
         <div className="bg-card shadow rounded-xl p-4 w-full">
-          <ApexChart options={chartData.options} series={chartData.series} type="line" height={600}/>
+          <ReactECharts key={chartKey} option={chartOptions} style={{ height: 600 }} />
         </div>
       )}
     </main>

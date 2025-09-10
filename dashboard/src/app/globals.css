@@ -41,6 +41,16 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+   /* Light Mode Variables */
+  --pvpt-bg: #ffffff;
+  --pvpt-text: #222222;
+  --pvpt-grid: #d9d9d9;
+  --pvpt-tooltip-bg: #ffffff;
+  --pvpt-tooltip-text: #000000;
+  --pvpt-border: #cccccc;
+  --pvpt-head-color: #007bff;   /* Head End Line */
+  --pvpt-crank-color: #ff007f;  /* Crank End Line */
+
 }
 
 :root {
@@ -76,6 +86,15 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --pvpt-bg: #ffffff;
+  --pvpt-text: #222222;
+  --pvpt-grid: #d9d9d9;
+  --pvpt-tooltip-bg: #ffffff;
+  --pvpt-tooltip-text: #000000;
+  --pvpt-border: #cccccc;
+  --pvpt-head-color: #007bff;   /* Head End Line */
+  --pvpt-crank-color: #ff007f;  /* Crank End Line */
 }
 
 .dark {
@@ -110,6 +129,17 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  /* Dark Mode Variables */
+  --pvpt-bg: #1e1e1e;
+  --pvpt-text: #f5f5f5;
+  --pvpt-grid: #444444;
+  --pvpt-tooltip-bg: #111111;
+  --pvpt-tooltip-text: #ffffff;
+  --pvpt-border: #333333;
+  --pvpt-head-color: #00f5ff;
+  --pvpt-crank-color: #ff66b2;
+
 }
 
 @layer base {
