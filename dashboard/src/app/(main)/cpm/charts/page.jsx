@@ -36,7 +36,7 @@ function normalizedVolume(theta, clearance_pct = 5, bore_mm = 300, stroke_mm = 4
 
 // ✅ Moving average smoothing
 function smoothArray(arr, windowSize = 5) {
-  const half = Math.floor(windowSize / 1);
+  const half = Math.floor(windowSize / 2);
   return arr.map((_, i) => {
     const start = Math.max(0, i - half);
     const end = Math.min(arr.length - 1, i + half);
