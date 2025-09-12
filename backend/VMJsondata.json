@@ -1,0 +1,3738 @@
+{
+  "updatePrimary": [
+    {
+      "timestamp": "2025-09-12T05:16:08.996Z",
+      "data": {
+        "primary": false
+      }
+    }
+  ],
+  "newMessage": [
+    {
+      "timestamp": "2025-09-12T05:16:09.025Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2760",
+        "timestamp": "09/12/2025 00:55:53",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:09.169Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2761",
+        "timestamp": "09/12/2025 00:55:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:09.319Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2762",
+        "timestamp": "09/12/2025 00:55:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:09.475Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2763",
+        "timestamp": "09/12/2025 00:55:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:11.889Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2764",
+        "timestamp": "09/12/2025 00:55:56",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:12.034Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2765",
+        "timestamp": "09/12/2025 00:55:56",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:12.178Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2766",
+        "timestamp": "09/12/2025 00:55:57",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:12.325Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2767",
+        "timestamp": "09/12/2025 00:55:57",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:14.750Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2768",
+        "timestamp": "09/12/2025 00:55:59",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:14.898Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2769",
+        "timestamp": "09/12/2025 00:55:59",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:15.043Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2770",
+        "timestamp": "09/12/2025 00:55:59",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:15.190Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2771",
+        "timestamp": "09/12/2025 00:56:00",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:17.612Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2772",
+        "timestamp": "09/12/2025 00:56:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:17.758Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2773",
+        "timestamp": "09/12/2025 00:56:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:17.905Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2774",
+        "timestamp": "09/12/2025 00:56:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:18.052Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2775",
+        "timestamp": "09/12/2025 00:56:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:20.487Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2776",
+        "timestamp": "09/12/2025 00:56:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:20.622Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2777",
+        "timestamp": "09/12/2025 00:56:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:20.768Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2778",
+        "timestamp": "09/12/2025 00:56:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:20.917Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2779",
+        "timestamp": "09/12/2025 00:56:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:23.338Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2780",
+        "timestamp": "09/12/2025 00:56:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:23.493Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2781",
+        "timestamp": "09/12/2025 00:56:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:23.632Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2782",
+        "timestamp": "09/12/2025 00:56:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:23.778Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2783",
+        "timestamp": "09/12/2025 00:56:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:26.202Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2784",
+        "timestamp": "09/12/2025 00:56:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:26.349Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2785",
+        "timestamp": "09/12/2025 00:56:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:26.506Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2786",
+        "timestamp": "09/12/2025 00:56:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:26.642Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2787",
+        "timestamp": "09/12/2025 00:56:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:29.066Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2788",
+        "timestamp": "09/12/2025 00:56:13",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:29.210Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2789",
+        "timestamp": "09/12/2025 00:56:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:29.414Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2790",
+        "timestamp": "09/12/2025 00:56:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:29.521Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2791",
+        "timestamp": "09/12/2025 00:56:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:31.928Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2792",
+        "timestamp": "09/12/2025 00:56:16",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:32.073Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2793",
+        "timestamp": "09/12/2025 00:56:17",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:32.219Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2794",
+        "timestamp": "09/12/2025 00:56:17",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:32.395Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2795",
+        "timestamp": "09/12/2025 00:56:17",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:34.789Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2796",
+        "timestamp": "09/12/2025 00:56:19",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:34.935Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2797",
+        "timestamp": "09/12/2025 00:56:19",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:35.083Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2798",
+        "timestamp": "09/12/2025 00:56:20",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:35.228Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2799",
+        "timestamp": "09/12/2025 00:56:20",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:37.651Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2800",
+        "timestamp": "09/12/2025 00:56:22",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:37.797Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2801",
+        "timestamp": "09/12/2025 00:56:22",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:37.945Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2802",
+        "timestamp": "09/12/2025 00:56:22",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:38.091Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2803",
+        "timestamp": "09/12/2025 00:56:23",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:40.524Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2804",
+        "timestamp": "09/12/2025 00:56:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:40.663Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2805",
+        "timestamp": "09/12/2025 00:56:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:40.809Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2806",
+        "timestamp": "09/12/2025 00:56:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:40.955Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2807",
+        "timestamp": "09/12/2025 00:56:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:43.428Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2808",
+        "timestamp": "09/12/2025 00:56:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:43.536Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2809",
+        "timestamp": "09/12/2025 00:56:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:43.671Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2810",
+        "timestamp": "09/12/2025 00:56:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:43.837Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2811",
+        "timestamp": "09/12/2025 00:56:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:46.240Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2812",
+        "timestamp": "09/12/2025 00:56:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:46.435Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2813",
+        "timestamp": "09/12/2025 00:56:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:46.542Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2814",
+        "timestamp": "09/12/2025 00:56:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:46.680Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2815",
+        "timestamp": "09/12/2025 00:56:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:49.103Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2816",
+        "timestamp": "09/12/2025 00:56:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:49.251Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2817",
+        "timestamp": "09/12/2025 00:56:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:49.437Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2818",
+        "timestamp": "09/12/2025 00:56:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:49.551Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2819",
+        "timestamp": "09/12/2025 00:56:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:51.968Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2820",
+        "timestamp": "09/12/2025 00:56:36",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:52.112Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2821",
+        "timestamp": "09/12/2025 00:56:37",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:52.259Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2822",
+        "timestamp": "09/12/2025 00:56:37",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:52.433Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2823",
+        "timestamp": "09/12/2025 00:56:37",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:54.830Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2824",
+        "timestamp": "09/12/2025 00:56:39",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:54.975Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2825",
+        "timestamp": "09/12/2025 00:56:39",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:55.123Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2826",
+        "timestamp": "09/12/2025 00:56:40",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:55.270Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2827",
+        "timestamp": "09/12/2025 00:56:40",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:57.690Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2828",
+        "timestamp": "09/12/2025 00:56:42",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:57.837Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2829",
+        "timestamp": "09/12/2025 00:56:42",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:57.984Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2830",
+        "timestamp": "09/12/2025 00:56:42",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:58.131Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2831",
+        "timestamp": "09/12/2025 00:56:43",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:00.558Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2832",
+        "timestamp": "09/12/2025 00:56:45",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:00.703Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2833",
+        "timestamp": "09/12/2025 00:56:45",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:00.847Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2834",
+        "timestamp": "09/12/2025 00:56:45",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:01.006Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2835",
+        "timestamp": "09/12/2025 00:56:45",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:03.430Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2836",
+        "timestamp": "09/12/2025 00:56:48",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:03.563Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2837",
+        "timestamp": "09/12/2025 00:56:48",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:03.802Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2838",
+        "timestamp": "09/12/2025 00:56:48",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:03.860Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2839",
+        "timestamp": "09/12/2025 00:56:48",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:06.281Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2840",
+        "timestamp": "09/12/2025 00:56:51",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:06.456Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2841",
+        "timestamp": "09/12/2025 00:56:51",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:06.573Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2842",
+        "timestamp": "09/12/2025 00:56:51",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:06.721Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2843",
+        "timestamp": "09/12/2025 00:56:51",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:09.143Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2844",
+        "timestamp": "09/12/2025 00:56:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:09.288Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2845",
+        "timestamp": "09/12/2025 00:56:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:09.460Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2846",
+        "timestamp": "09/12/2025 00:56:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:09.583Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2847",
+        "timestamp": "09/12/2025 00:56:54",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:12.006Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2848",
+        "timestamp": "09/12/2025 00:56:56",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:12.153Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2849",
+        "timestamp": "09/12/2025 00:56:57",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:12.298Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2850",
+        "timestamp": "09/12/2025 00:56:57",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:12.461Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2851",
+        "timestamp": "09/12/2025 00:56:57",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:14.871Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2852",
+        "timestamp": "09/12/2025 00:56:59",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:15.015Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2853",
+        "timestamp": "09/12/2025 00:56:59",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:15.168Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2854",
+        "timestamp": "09/12/2025 00:57:00",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:15.310Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2855",
+        "timestamp": "09/12/2025 00:57:00",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:17.731Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2856",
+        "timestamp": "09/12/2025 00:57:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:17.879Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2857",
+        "timestamp": "09/12/2025 00:57:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:18.025Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2858",
+        "timestamp": "09/12/2025 00:57:02",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:18.179Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2859",
+        "timestamp": "09/12/2025 00:57:03",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:20.602Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2860",
+        "timestamp": "09/12/2025 00:57:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:20.741Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2861",
+        "timestamp": "09/12/2025 00:57:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:20.888Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2862",
+        "timestamp": "09/12/2025 00:57:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:21.035Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2863",
+        "timestamp": "09/12/2025 00:57:05",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:23.483Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2864",
+        "timestamp": "09/12/2025 00:57:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:23.601Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2865",
+        "timestamp": "09/12/2025 00:57:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:23.750Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2866",
+        "timestamp": "09/12/2025 00:57:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:23.897Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2867",
+        "timestamp": "09/12/2025 00:57:08",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:26.322Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2868",
+        "timestamp": "09/12/2025 00:57:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:26.482Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2869",
+        "timestamp": "09/12/2025 00:57:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:26.625Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2870",
+        "timestamp": "09/12/2025 00:57:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:26.760Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2871",
+        "timestamp": "09/12/2025 00:57:11",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:29.184Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2872",
+        "timestamp": "09/12/2025 00:57:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:29.329Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2873",
+        "timestamp": "09/12/2025 00:57:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:29.489Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2874",
+        "timestamp": "09/12/2025 00:57:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:29.623Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2875",
+        "timestamp": "09/12/2025 00:57:14",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:32.045Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2876",
+        "timestamp": "09/12/2025 00:57:16",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:32.192Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2877",
+        "timestamp": "09/12/2025 00:57:17",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:32.339Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2878",
+        "timestamp": "09/12/2025 00:57:17",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:32.497Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2879",
+        "timestamp": "09/12/2025 00:57:17",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:34.908Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2880",
+        "timestamp": "09/12/2025 00:57:19",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:35.056Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2881",
+        "timestamp": "09/12/2025 00:57:19",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:35.201Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2882",
+        "timestamp": "09/12/2025 00:57:20",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:35.360Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2883",
+        "timestamp": "09/12/2025 00:57:20",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:37.770Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2884",
+        "timestamp": "09/12/2025 00:57:22",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:37.916Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2885",
+        "timestamp": "09/12/2025 00:57:22",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:38.063Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2886",
+        "timestamp": "09/12/2025 00:57:23",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:38.210Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2887",
+        "timestamp": "09/12/2025 00:57:23",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:40.635Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2888",
+        "timestamp": "09/12/2025 00:57:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:40.781Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2889",
+        "timestamp": "09/12/2025 00:57:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:40.928Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2890",
+        "timestamp": "09/12/2025 00:57:25",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:41.075Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2891",
+        "timestamp": "09/12/2025 00:57:26",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:43.502Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2892",
+        "timestamp": "09/12/2025 00:57:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:43.642Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2893",
+        "timestamp": "09/12/2025 00:57:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:43.804Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2894",
+        "timestamp": "09/12/2025 00:57:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:43.937Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2895",
+        "timestamp": "09/12/2025 00:57:28",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:46.360Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2896",
+        "timestamp": "09/12/2025 00:57:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:46.513Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2897",
+        "timestamp": "09/12/2025 00:57:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:46.653Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2898",
+        "timestamp": "09/12/2025 00:57:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:46.800Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2899",
+        "timestamp": "09/12/2025 00:57:31",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:49.226Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2900",
+        "timestamp": "09/12/2025 00:57:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:49.368Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2901",
+        "timestamp": "09/12/2025 00:57:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:49.531Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2902",
+        "timestamp": "09/12/2025 00:57:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:49.663Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2903",
+        "timestamp": "09/12/2025 00:57:34",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:52.086Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2904",
+        "timestamp": "09/12/2025 00:57:37",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:52.231Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2905",
+        "timestamp": "09/12/2025 00:57:37",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:52.379Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2906",
+        "timestamp": "09/12/2025 00:57:37",
+        "type": 0,
+        "user": "System"
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:52.539Z",
+      "data": {
+        "text": "Looking for RPM - loop: 2907",
+        "timestamp": "09/12/2025 00:57:37",
+        "type": 0,
+        "user": "System"
+      }
+    }
+  ],
+  "systemStatus": [
+    {
+      "timestamp": "2025-09-12T05:16:09.372Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:55:54 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:10.405Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:55:55 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:11.386Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:55:56 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:12.361Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:55:57 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:13.382Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:55:58 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:14.386Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:55:59 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:15.385Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:00 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:16.386Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:01 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:17.384Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:02 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:18.393Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:03 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:19.396Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:04 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:20.396Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:05 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:21.397Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:06 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:22.396Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:07 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:23.387Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:08 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:24.392Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:09 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:25.400Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:10 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:26.392Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:11 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:27.410Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:12 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:28.406Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:13 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:29.393Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:14 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:30.401Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:15 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:31.400Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:16 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:32.380Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:17 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:33.408Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:18 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:34.406Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:19 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:35.410Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:20 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:36.411Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:21 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:37.410Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:22 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:38.404Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:23 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:39.410Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:24 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:40.416Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:25 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:41.415Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:26 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:42.414Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:27 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:43.402Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:28 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:44.451Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:29 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:45.419Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:30 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:46.407Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:31 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:47.407Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:32 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:48.415Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:33 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:49.409Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:34 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:50.419Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:35 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:51.423Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:36 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:52.417Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:37 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:53.422Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:38 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:54.423Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:39 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:55.423Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:40 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:56.425Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:41 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:57.425Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:42 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:58.422Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:43 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:16:59.425Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:44 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:00.418Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:45 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:01.420Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:46 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:02.417Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:47 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:03.418Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:48 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:04.429Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:49 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:05.430Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:50 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:06.422Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:51 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:07.427Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:52 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:08.418Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:53 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:09.422Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:54 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:10.463Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:55 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:11.422Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:56 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:12.418Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:57 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:13.433Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:58 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:14.425Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:56:59 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:15.424Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:00 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:16.432Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:01 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:17.433Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:02 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:18.431Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:03 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:19.435Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:04 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:20.469Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:05 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:21.440Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:06 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:22.435Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:07 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:23.464Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:08 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:24.438Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:09 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:25.438Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:10 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:26.424Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:11 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:27.439Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:12 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:28.444Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:13 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:29.426Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:14 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:30.444Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:15 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:31.441Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:16 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:32.429Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:17 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:33.447Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:18 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:34.445Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:19 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:35.432Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:20 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:36.451Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:21 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:37.452Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:22 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:38.450Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:23 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:39.443Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:24 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:40.450Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:25 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:41.450Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:26 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:42.444Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:27 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:43.455Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:28 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:44.456Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:29 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:45.455Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:30 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:46.439Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:31 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:47.456Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:32 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:48.455Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:33 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:49.440Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:34 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:50.456Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:35 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:51.453Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:36 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    },
+    {
+      "timestamp": "2025-09-12T05:17:52.456Z",
+      "data": {
+        "mrxUploading": false,
+        "lastUploadSuccess": null,
+        "lastUploadFail": null,
+        "timezone": "America/New_York",
+        "status": 0,
+        "tdcFlag": 1,
+        "currentRPM": 0,
+        "acqRunning": true,
+        "time": "9/12/2025, 12:57:37 AM",
+        "acqMode": 1,
+        "analysisMode": false,
+        "debug": false,
+        "lastUpdate": "00/00/00 00:00:00",
+        "loggerLevel": 4,
+        "relayStateFlag": false,
+        "sdFullAlarm": false,
+        "techMode": false,
+        "timeoutScan": false
+      }
+    }
+  ]
+}

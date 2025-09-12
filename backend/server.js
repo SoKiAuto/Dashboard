@@ -1,72 +1,46 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const config = require("./utils/config");
-const logger = require("./utils/logger");
+const path = require("path");
+const { io } = require("socket.io-client");
 
-// Services
-const { startCPMSocketService } = require("./services/CPMsocketService");
-const CPMhistoryService = require("./services/CPMhistoryService");
+const CPMliveService = require(path.join(__dirname, "services/CPMliveService"));
+const logger = require(path.join(__dirname, "utils/logger"));
 
+// ---------------- [ DATABASE CONNECT ] ----------------
+mongoose
+  .connect("mongodb://127.0.0.1:27017/wi_controller")
+  .then(() => logger.success("✅ MongoDB connected"))
+  .catch((err) => logger.error(`❌ MongoDB error: ${err.message}`));
+
+// ---------------- [ EXPRESS SERVER ] ----------------
 const app = express();
-const PORT = config.PORT || 5000;
+app.use(express.json());
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => logger.success(`🚀 Express server running on port ${PORT}`));
 
-// ---------------------------
-// 1. MIDDLEWARES
-// ---------------------------
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// ---------------- [ DEVICE SOCKET ] ----------------
+const DEVICE_URL = "http://172.16.0.1:10001"; // replace with your device IP:port
+const socket = io(DEVICE_URL, { reconnection: true });
 
-// ---------------------------
-// 2. DATABASE CONNECTION
-// ---------------------------
-const connectDB = async () => {
-  try {
-    await mongoose.connect(config.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+const TARGET_EVENTS = ["updatePrimary", "cpmCalc", "systemStatus", "newCurve", "modbusData"];
 
-    logger.success("✅ MongoDB connected successfully");
-  } catch (err) {
-    logger.error(`❌ MongoDB connection failed: ${err.message}`);
-    process.exit(1);
-  }
-};
+socket.on("connect", () => logger.success(`✅ Connected to device at ${DEVICE_URL} | Socket ID: ${socket.id}`));
+socket.on("disconnect", () => logger.warn("🔌 Disconnected from device"));
+socket.on("connect_error", (err) => logger.error(`❌ Connection error: ${err.message}`));
 
-// ---------------------------
-// 3. BASIC ROUTES
-// ---------------------------
+// ---------------- [ HANDLE EVENTS ] ----------------
+TARGET_EVENTS.forEach((eventName) => {
+  socket.on(eventName, async (data) => {
+    try {
+      const deviceId = data.deviceId || "CPM-001";
+      logger.info(`📡 Event received: ${eventName} | Device: ${deviceId}`);
 
-// Health check API
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    status: "OK",
-    message: "CPM Dashboard Backend is Running ✅",
-    timestamp: new Date(),
+      // Directly save incoming data
+      await CPMliveService.saveRawData(deviceId, eventName, data);
+
+      logger.success(`💾 Data saved for ${deviceId} (${eventName})`);
+    } catch (err) {
+      logger.error(`❌ Failed to save ${eventName}: ${err.message}`);
+    }
   });
 });
-
-// ---------------------------
-// 4. START SERVER
-// ---------------------------
-const startServer = async () => {
-  await connectDB();
-
-  // Start Express server
-  app.listen(PORT, () => {
-    logger.success(`🚀 Server running on http://localhost:${PORT}`);
-  });
-
-  // Start Socket.IO listener for CPM devices
-  startCPMSocketService();
-
-  // Start automatic history snapshot scheduler
-  CPMhistoryService.startScheduler(config.HISTORY_INTERVAL || 60 * 1000);
-
-  logger.info("📡 CPM Dashboard Backend Services Started...");
-};
-
-startServer();
