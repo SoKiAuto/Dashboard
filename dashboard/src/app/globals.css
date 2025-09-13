@@ -41,15 +41,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-   /* Light Mode Variables */
-  --pvpt-bg: #ffffff;
-  --pvpt-text: #222222;
-  --pvpt-grid: #d9d9d9;
-  --pvpt-tooltip-bg: #ffffff;
-  --pvpt-tooltip-text: #000000;
-  --pvpt-border: #cccccc;
-  --pvpt-head-color: #007bff;   /* Head End Line */
-  --pvpt-crank-color: #ff007f;  /* Crank End Line */
+  
 
 }
 
@@ -87,6 +79,7 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
+    /* Light Mode Variables */
   --pvpt-bg: #ffffff;
   --pvpt-text: #222222;
   --pvpt-grid: #d9d9d9;
@@ -95,6 +88,7 @@
   --pvpt-border: #cccccc;
   --pvpt-head-color: #007bff;   /* Head End Line */
   --pvpt-crank-color: #ff007f;  /* Crank End Line */
+
 }
 
 .dark {
