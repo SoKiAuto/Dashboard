@@ -32,7 +32,7 @@ socket.on("connect_error", (err) => logger.error(`❌ Connection error: ${err.me
 TARGET_EVENTS.forEach((eventName) => {
   socket.on(eventName, async (data) => {
     try {
-      const deviceId = data.deviceId || "CPM-002";
+      const deviceId = data.deviceId || "CPM-001";
       logger.info(`📡 Event received: ${eventName} | Device: ${deviceId}`);
 
       // Directly save incoming data
