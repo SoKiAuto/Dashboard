@@ -200,7 +200,7 @@ export default function PVPTCurvePage() {
         name: "Pressure",
         nameLocation: "middle",
         nameGap: 50,
-        nameTextStyle: { color: textColor, fontSize: 13 },
+        nameTextStyle: { color: textColor, fontSize: 14 },
         axisLine: { lineStyle: { color: gridColor } },
         axisLabel: { 
           color: textColor,
