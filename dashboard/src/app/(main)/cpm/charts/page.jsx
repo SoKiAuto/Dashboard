@@ -202,11 +202,15 @@ export default function PVPTCurvePage() {
         nameGap: 50,
         nameTextStyle: { color: textColor, fontSize: 14 },
         axisLine: { lineStyle: { color: gridColor } },
-        axisLabel: { color: textColor ,  },
+        axisLabel: { 
+          color: textColor,
+          formatter: (val) => val.toFixed(2) 
+        },
         splitLine: { show: true, lineStyle: { color: gridColor } },
         min: "dataMin",
         max: "dataMax",
       },
+
       series,
       grid: { left: 80, right: 30, top: 60, bottom: 80 },
       dataZoom: [
