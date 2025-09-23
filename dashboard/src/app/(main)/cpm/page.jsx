@@ -55,7 +55,7 @@ export default function SentinelCPMPage() {
     () =>
       Object.keys(cylinders)
         .sort((a, b) => {
-          const ai = parseInt(a.split("_")[1] || "0", 10);
+          const ai = parseInt(a.split("_")[1] || "0", 11);
           const bi = parseInt(b.split("_")[1] || "0", 10);
           return ai - bi;
         })
