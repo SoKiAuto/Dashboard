@@ -19,7 +19,7 @@ import DeviceStatus from "@/components/DeviceStatus";
 
 // ------- Donut Gauge (Animated CPM KPIs) -------
 function DonutGauge({ label, value = 0, max = 100, unit = "", colorVar = "--chart-1" }) {
-  const pct = Math.max(0, Math.min(1, value / max));
+  const pct = Math.max(0, Math.min(2, value / max));
   const data = useMemo(
     () => [
       { name: "value", val: value },
