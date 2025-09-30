@@ -39,7 +39,7 @@ function DonutGauge({ label, value = 0, max = 100, unit = "", colorVar = "--char
         <CardTitle className="text-sm font-semibold tracking-wide">{label}</CardTitle>
       </CardHeader>
       <CardContent className="pt-0">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-10">
           <div className="w-36 h-36">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
