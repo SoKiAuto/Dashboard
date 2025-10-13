@@ -16,7 +16,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="flex flex-col flex-auto items-center justify-between p-27">
+    <main className="flex flex-col flex-auto items-center justify-between p-2">
       <h1 className="text-4xl font-bold">Welcome to W! Platform!</h1>
       <Image
         src="/logo.svg"
