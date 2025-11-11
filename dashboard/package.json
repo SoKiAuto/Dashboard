@@ -28,6 +28,7 @@
     "@tanstack/react-table": "^8.21.3",
     "apexcharts": "^5.3.4",
     "axios": "^1.10.0",
+    "canvas-gauges": "^2.1.7",
     "cesium": "^1.132.0",
     "chart.js": "^4.5.0",
     "class-variance-authority": "^0.7.1",

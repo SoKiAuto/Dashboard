@@ -184,6 +184,10 @@ export default function Unit1Dashboard() {
             VM Dashboard
             
           </Button>
+           <Button variant="secondary" onClick={() => router.push("/DE4000")}>
+            DE4000 Dashboard
+            
+          </Button>
 
         </div>
         
