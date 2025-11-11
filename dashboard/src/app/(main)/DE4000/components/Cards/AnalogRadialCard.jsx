@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 
 const AnalogTopSemiGauge = ({
   label = "Gauge Label",
@@ -12,9 +12,23 @@ const AnalogTopSemiGauge = ({
 }) => {
   const canvasRef = useRef(null);
   const gaugeRef = useRef(null);
+  const labelRef = useRef(null);
+  const [fontSize, setFontSize] = useState(26);
+
+  // ✅ Adjust font size dynamically based on label length
+  useLayoutEffect(() => {
+    if (!labelRef.current) return;
+
+    const words = label.split(" ");
+    const isLong = label.length > 18 || words.length > 2;
+
+    if (isLong) setFontSize(20);
+    else if (label.length > 12) setFontSize(24);
+    else setFontSize(26);
+  }, [label]);
 
   useEffect(() => {
-    // ✅ Import dynamically on client only
+    // ✅ Import dynamically (client-only)
     import("canvas-gauges").then(({ RadialGauge }) => {
       const gauge = new RadialGauge({
         renderTo: canvasRef.current,
@@ -74,6 +88,7 @@ const AnalogTopSemiGauge = ({
         marginBottom: 50,
       }}
     >
+      {/* Gauge Container */}
       <div
         style={{
           width: 300,
@@ -83,8 +98,8 @@ const AnalogTopSemiGauge = ({
           background: "#fff",
           borderTopLeftRadius: 150,
           borderTopRightRadius: 150,
-          borderBottomLeftRadius: 60,
-          borderBottomRightRadius: 60,
+          borderBottomLeftRadius: 40,
+          borderBottomRightRadius: 40,
           border: "2px solid #000",
           marginTop: 10,
         }}
@@ -92,10 +107,11 @@ const AnalogTopSemiGauge = ({
         <canvas ref={canvasRef} width={300} height={300}></canvas>
       </div>
 
+      {/* Label + Value Box */}
       <div
         style={{
           position: "absolute",
-          bottom: -40,
+          bottom: -35,
           left: "50%",
           transform: "translateX(-50%)",
           width: 300,
@@ -105,41 +121,50 @@ const AnalogTopSemiGauge = ({
           padding: "8px 12px",
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "flex-end",
+          alignItems: "center",
           boxSizing: "border-box",
+          height: 65, // fixed height
+          overflow: "hidden",
         }}
       >
+        {/* Label (auto-wrap + shrink font) */}
         <div
+          ref={labelRef}
           style={{
-            fontSize: 14,
-            fontWeight: 600,
+            fontSize: fontSize,
+            fontWeight: 700,
             color: "#000",
             textAlign: "left",
+            lineHeight: 1.1,
+            maxWidth: "55%",
+            wordWrap: "break-word",
+            whiteSpace: "normal",
           }}
         >
           {label}
         </div>
-        <div style={{ textAlign: "right" }}>
-          <div
+
+        {/* Value + Unit inline */}
+        <div
+          style={{
+            fontSize: 30,
+            fontWeight: 800,
+            color: "#172C51",
+            display: "flex",
+            alignItems: "baseline",
+            gap: 6,
+          }}
+        >
+          <span>{value}</span>
+          <span
             style={{
-              fontSize: 32,
-              fontWeight: 700,
-              color: "#172C51",
-              lineHeight: 1,
-            }}
-          >
-            {value}
-          </div>
-          <div
-            style={{
-              fontSize: 14,
-              fontWeight: 500,
+              fontSize: 16,
+              fontWeight: 600,
               color: "#000",
-              marginTop: 2,
             }}
           >
             {unit}
-          </div>
+          </span>
         </div>
       </div>
     </div>

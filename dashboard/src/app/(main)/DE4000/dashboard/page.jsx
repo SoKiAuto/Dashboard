@@ -5,7 +5,7 @@ import Node1 from "./node1";
 import Node2 from "./node2";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const nodes = [Node1, Node2];
+const nodes = [Node1, Node2]; // Add more nodes later
 
 export default function DE4000DashboardPage() {
   const [currentNode, setCurrentNode] = useState(0);
@@ -13,23 +13,41 @@ export default function DE4000DashboardPage() {
 
   return (
     <div className="relative w-full h-full flex flex-col bg-black text-[#BDB8AE] overflow-hidden">
-      {/* Header Bar (for Node Switching) */}
+      {/* 🔹 Header Bar */}
       <div className="flex justify-between items-center px-6 py-3 border-b border-gray-700">
-        <h1 className="text-xl font-semibold">
-          DE4000 Dashboard — Node {currentNode + 1} / {nodes.length}
+        {/* Left: Dashboard Title */}
+        <h1 className="text-lg font-semibold text-white">
+          DE4000 Dashboard
         </h1>
 
+        {/* Center: Node Indicators */}
+        <div className="flex gap-3 items-center">
+          {nodes.map((_, index) => (
+            <div
+              key={index}
+              className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-semibold border transition-all duration-200 ${
+                currentNode === index
+                  ? "bg-[#25458C] text-white border-[#25458C]"
+                  : "bg-transparent text-gray-500 border-gray-600"
+              }`}
+            >
+              {currentNode === index ? `${index + 1}/${nodes.length}` : ""}
+            </div>
+          ))}
+        </div>
+
+        {/* Right: Navigation Arrows */}
         <div className="flex gap-2">
           <button
             onClick={() => setCurrentNode((p) => Math.max(p - 1, 0))}
             disabled={currentNode === 0}
-            className={`px-4 py-2 rounded-md flex items-center gap-1 ${
+            className={`p-2 rounded-md flex items-center justify-center ${
               currentNode === 0
                 ? "bg-gray-700 text-gray-400 cursor-not-allowed"
                 : "bg-[#25458C] text-white hover:bg-[#3667b1]"
             }`}
           >
-            <ChevronLeft className="w-4 h-4" /> Prev
+            <ChevronLeft className="w-5 h-5" />
           </button>
 
           <button
@@ -37,18 +55,18 @@ export default function DE4000DashboardPage() {
               setCurrentNode((p) => Math.min(p + 1, nodes.length - 1))
             }
             disabled={currentNode === nodes.length - 1}
-            className={`px-4 py-2 rounded-md flex items-center gap-1 ${
+            className={`p-2 rounded-md flex items-center justify-center ${
               currentNode === nodes.length - 1
                 ? "bg-gray-700 text-gray-400 cursor-not-allowed"
                 : "bg-[#25458C] text-white hover:bg-[#3667b1]"
             }`}
           >
-            Next <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       </div>
 
-      {/* Main Window Area */}
+      {/* 🔹 Fixed Dashboard Window */}
       <div className="flex-1 flex justify-center items-center overflow-hidden">
         <div
           className="
