@@ -14,7 +14,7 @@ export default function DE4000DashboardPage() {
   return (
     <div className="relative w-full h-full flex flex-col bg-black text-[#BDB8AE] overflow-hidden">
       {/* 🔹 Header Bar */}
-      <div className="flex justify-between items-center px-6 py-31 border-b border-gray-700">
+      <div className="flex justify-between items-center px-6 py-3 border-b border-gray-700">
         {/* Left: Dashboard Title */}
         <h1 className="text-lg font-semibold text-white">
           DE4000 Dashboard
