@@ -3,9 +3,13 @@
 import React, { useState } from "react";
 import Node1 from "./node1";
 import Node2 from "./node2";
+import Node3 from "./node3";
+import Node4 from "./node4";
+import Node5 from "./node5";
+import Node6 from "./node6";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const nodes = [Node1, Node2]; // Add more nodes later
+const nodes = [Node1, Node2, Node3, Node4, Node5, Node6];
 
 export default function DE4000DashboardPage() {
   const [currentNode, setCurrentNode] = useState(0);
@@ -14,13 +18,10 @@ export default function DE4000DashboardPage() {
   return (
     <div className="relative w-full h-full flex flex-col bg-black text-[#BDB8AE] overflow-hidden">
       {/* 🔹 Header Bar */}
-      <div className="flex justify-between items-center px-6 py-3 border-b border-gray-700">
-        {/* Left: Dashboard Title */}
-        <h1 className="text-lg font-semibold text-white">
-          DE4000 Dashboard
-        </h1>
+      <div className="flex justify-between items-center px-6 py-3 bg-black">
+        <h1 className="text-lg font-semibold text-white">DE4000 Dashboard</h1>
 
-        {/* Center: Node Indicators */}
+        {/* Node Indicators */}
         <div className="flex gap-3 items-center">
           {nodes.map((_, index) => (
             <div
@@ -36,7 +37,7 @@ export default function DE4000DashboardPage() {
           ))}
         </div>
 
-        {/* Right: Navigation Arrows */}
+        {/* Arrows */}
         <div className="flex gap-2">
           <button
             onClick={() => setCurrentNode((p) => Math.max(p - 1, 0))}
@@ -66,18 +67,14 @@ export default function DE4000DashboardPage() {
         </div>
       </div>
 
-      {/* 🔹 Fixed Dashboard Window */}
-      <div className="flex-1 flex justify-center items-center overflow-hidden">
+      {/* Node Window */}
+      <div className="flex-1 flex justify-center items-center p-0 m-0 overflow-hidden">
         <div
-          className="
-            w-[1300px]
-            h-[700px]
-            bg-[#111]
-            border border-gray-700
-            rounded-lg
-            shadow-md
-            flex justify-center items-center
-          "
+          className="w-[1300px] h-[700px] bg-[#111] border border-gray-700 rounded-lg shadow-md flex justify-center items-center m-0"
+          style={{
+            marginTop: "-2px",
+            marginLeft: "-1px",
+          }}
         >
           <CurrentNodeComponent />
         </div>

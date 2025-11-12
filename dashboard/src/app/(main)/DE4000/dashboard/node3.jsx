@@ -2,45 +2,33 @@
 
 import AnalogTopSemiGauge from "../components/Cards/AnalogRadialCard";
 import AnalogLabelCard from "../components/Cards/AnalogLabelCard";
-import DiscreteChannelCard from "../components/Cards/DiscreteChannelCard";
 
-export default function Node1() {
+export default function Node3() {
   const radialCards = [
-    "STG1 SUC PRESSURE",
-    "STG1 DISCH PRESSURE",
-    "STG2 SUC PRESSURE",
-    "STG2 DISCH PRESSURE",
+    "AIR MANIFOLD LB TEMP",
+    "AIR MANIFOLD RB TEMP",
+    "EJW FLOW",
+    "ENGINE RPM",
   ];
 
   const labelCards = [
-    "STG1 SUC TEMP",
-    "STG1 DISCH TEMP",
-    "STG2 SUC TEMP",
-    "STG2 DISCH TEMP",
+    "ENGINE LB VIBRATION",
+    "ENGINE RB VIBRATION",
+    "COOLER DE VIBRATION",
+    "COOLER NDE VIBRATION",
   ];
-
-  const discreteCards = ["Fuel", "Ignition", "Crank", "PreLube"];
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-6">
-      {/* 1st Row */}
       <div className="flex flex-wrap justify-center gap-8">
         {radialCards.map((label, i) => (
           <AnalogTopSemiGauge key={i} label={label} value={Math.floor(Math.random() * 100)} />
         ))}
       </div>
 
-      {/* 2nd Row */}
       <div className="flex flex-wrap justify-center gap-6">
         {labelCards.map((label, i) => (
           <AnalogLabelCard key={i} label={label} value={Math.floor(Math.random() * 100)} />
-        ))}
-      </div>
-
-      {/* 3rd Row */}
-      <div className="flex flex-wrap justify-center gap-4">
-        {discreteCards.map((name, i) => (
-          <DiscreteChannelCard key={i} name={name} state={Math.random() > 0.5} />
         ))}
       </div>
     </div>
