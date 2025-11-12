@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const modules = [
   { id: 1, connected: true },
   { id: 2, connected: true },
-  { id: 3, connected: true },
+  { id: 3, connected: false },
   { id: 4, connected: false },
   { id: 5, connected: false },
 ];
