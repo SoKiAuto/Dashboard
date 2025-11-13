@@ -56,7 +56,7 @@ export default function Sidebar() {
           <div
             key={item.name}
             className={`flex flex-col items-center justify-center h-20 w-25 text-xm font-medium rounded-sm ${disabledStyle}`}
-            title="Feature coming soon"
+            title="N/A"
           >
             <Icon className="h-7 w-7 mb-1" />
             {item.name}

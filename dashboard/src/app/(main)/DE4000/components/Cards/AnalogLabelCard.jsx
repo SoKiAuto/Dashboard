@@ -3,6 +3,7 @@
 export default function AnalogLabelCard({
   label = "Analog Label",
   value = 0,
+  unit = "", // New prop for unit
   color = "#e0e0e0", // mild gray header color
 }) {
   return (
@@ -45,6 +46,19 @@ export default function AnalogLabelCard({
         >
           {value}
         </span>
+        {unit && (
+          <span
+            className="text-[#172C51] ml-1"
+            style={{
+              fontSize: "18px",
+              fontWeight: 600,
+              alignSelf: "flex-end",
+              lineHeight: "1.2",
+            }}
+          >
+            {unit}
+          </span>
+        )}
       </div>
     </div>
   );

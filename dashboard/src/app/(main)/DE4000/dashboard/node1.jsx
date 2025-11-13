@@ -5,42 +5,64 @@ import AnalogLabelCard from "../components/Cards/AnalogLabelCard";
 import DiscreteChannelCard from "../components/Cards/DiscreteChannelCard";
 
 export default function Node1() {
+  // 🔹 1st Row: Radial Pressure Gauges
   const radialCards = [
-    "STG1 SUC PRESSURE",
-    "STG1 DISCH PRESSURE",
-    "STG2 SUC PRESSURE",
-    "STG2 DISCH PRESSURE",
+    { label: "STG1 SUC PRESSURE", unit: "bar" },
+    { label: "STG1 DISCH PRESSURE", unit: "bar" },
+    { label: "STG2 SUC PRESSURE", unit: "bar" },
+    { label: "STG2 DISCH PRESSURE", unit: "bar" },
   ];
 
+  // 🔹 2nd Row: Temperature Labels
   const labelCards = [
-    "STG1 SUC TEMP",
-    "STG1 DISCH TEMP",
-    "STG2 SUC TEMP",
-    "STG2 DISCH TEMP",
+    { label: "STG1 SUC TEMP", unit: "°C" },
+    { label: "STG1 DISCH TEMP", unit: "°C" },
+    { label: "STG2 SUC TEMP", unit: "°C" },
+    { label: "STG2 DISCH TEMP", unit: "°C" },
   ];
 
-  const discreteCards = ["Fuel", "Ignition", "Crank", "PreLube"];
+  // 🔹 3rd Row: Discrete Controls
+  const discreteCards = [
+    { name: "Fuel" },
+    { name: "Ignition" },
+    { name: "Crank" },
+    { name: "PreLube" },
+  ];
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-6">
-      {/* 1st Row */}
+      {/* 1️⃣ Row – Pressure Gauges */}
       <div className="flex flex-wrap justify-center gap-8">
-        {radialCards.map((label, i) => (
-          <AnalogTopSemiGauge key={i} label={label} value={Math.floor(Math.random() * 100)} />
+        {radialCards.map((card, i) => (
+          <AnalogTopSemiGauge
+            key={i}
+            label={card.label}
+            unit={card.unit}
+            value={Math.floor(Math.random() * 100)}
+          />
         ))}
       </div>
 
-      {/* 2nd Row */}
+      {/* 2️⃣ Row – Temperature Labels */}
       <div className="flex flex-wrap justify-center gap-6">
-        {labelCards.map((label, i) => (
-          <AnalogLabelCard key={i} label={label} value={Math.floor(Math.random() * 100)} />
+        {labelCards.map((card, i) => (
+          <AnalogLabelCard
+            key={i}
+            label={card.label}
+            unit={card.unit}
+            value={Math.floor(Math.random() * 100)}
+          />
         ))}
       </div>
 
-      {/* 3rd Row */}
+      {/* 3️⃣ Row – Discrete Channels */}
       <div className="flex flex-wrap justify-center gap-4">
-        {discreteCards.map((name, i) => (
-          <DiscreteChannelCard key={i} name={name} state={Math.random() > 0.5} />
+        {discreteCards.map((card, i) => (
+          <DiscreteChannelCard
+            key={i}
+            name={card.name}
+            state={Math.random() > 0.5}
+          />
         ))}
       </div>
     </div>

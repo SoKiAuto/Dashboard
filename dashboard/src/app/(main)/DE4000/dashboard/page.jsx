@@ -26,10 +26,10 @@ export default function DE4000DashboardPage() {
           {nodes.map((_, index) => (
             <div
               key={index}
-              className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-semibold border transition-all duration-200 ${
+              className={`h-8 w-8 rounded-full flex items-center justify-center text-xs font-semibold border transition-all duration-200 ${
                 currentNode === index
                   ? "bg-[#25458C] text-white border-[#25458C]"
-                  : "bg-transparent text-gray-500 border-gray-600"
+                  : "bg-transparent text-white-700 border-white-800"
               }`}
             >
               {currentNode === index ? `${index + 1}/${nodes.length}` : ""}

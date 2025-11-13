@@ -5,34 +5,41 @@ import AnalogLabelCard from "../components/Cards/AnalogLabelCard";
 export default function Node4() {
   const rows = [
     [
-      "ENGINE EXHAUST CYL#1 RB",
-      "ENGINE EXHAUST CYL#2 RB",
-      "ENGINE EXHAUST CYL#3 RB",
-      "ENGINE EXHAUST CYL#4 RB",
-      "ENGINE EXHAUST CYL#5 RB",
+      { label: "ENGINE EXHAUST CYL#1 RB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#2 RB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#3 RB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#4 RB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#5 RB", unit: "°C" },
     ],
     [
-      "ENGINE EXHAUST CYL#1 LB",
-      "ENGINE EXHAUST CYL#2 LB",
-      "ENGINE EXHAUST CYL#3 LB",
-      "ENGINE EXHAUST CYL#4 LB",
-      "ENGINE EXHAUST CYL#5 LB",
+      { label: "ENGINE EXHAUST CYL#1 LB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#2 LB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#3 LB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#4 LB", unit: "°C" },
+      { label: "ENGINE EXHAUST CYL#5 LB", unit: "°C" },
     ],
     [
-      "ENGINE EXHAUST COMMON RB",
-      "ENGINE EXHAUST COMMON LB",
-      "AIR MANIFOLD RB TEMP",
-      "AIR MANIFOLD LB TEMP",
+      { label: "ENGINE EXHAUST COMMON RB", unit: "°C" },
+      { label: "ENGINE EXHAUST COMMON LB", unit: "°C" },
+      { label: "AIR MANIFOLD RB TEMP", unit: "°C" },
+      { label: "AIR MANIFOLD LB TEMP", unit: "°C" },
     ],
-    ["ENGINE RPM"],
+    [
+      { label: "ENGINE RPM", unit: "rpm" },
+    ],
   ];
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-6 overflow-hidden">
       {rows.map((cards, i) => (
         <div key={i} className="flex flex-wrap justify-center gap-6">
-          {cards.map((label, j) => (
-            <AnalogLabelCard key={j} label={label} value={Math.floor(Math.random() * 100)} />
+          {cards.map((item, j) => (
+            <AnalogLabelCard
+              key={j}
+              label={item.label}
+              value={Math.floor(Math.random() * 100)}
+              unit={item.unit}
+            />
           ))}
         </div>
       ))}

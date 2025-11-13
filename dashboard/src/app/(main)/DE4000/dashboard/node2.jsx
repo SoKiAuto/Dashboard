@@ -5,40 +5,58 @@ import AnalogLabelCard from "../components/Cards/AnalogLabelCard";
 
 export default function Node2() {
   const topRadials = [
-    "COMP OIL HEADER PRESS",
-    "ENGINE LUBE OIL PRESS",
-    "FUEL GAS INLET PRESS",
+    { label: "COMP OIL HEADER PRESS", unit: "bar" },
+    { label: "ENGINE LUBE OIL PRESS", unit: "bar" },
+    { label: "FUEL GAS INLET PRESS", unit: "psi" },
   ];
 
   const midLabels = [
-    "COMP OIL HEADER TEMP",
-    "ENGINE LUBE OIL TEMP",
-    "FUEL GAS INLET TEMP",
+    { label: "COMP OIL HEADER TEMP", unit: "°C" },
+    { label: "ENGINE LUBE OIL TEMP", unit: "°C" },
+    { label: "FUEL GAS INLET TEMP", unit: "°C" },
   ];
 
   const bottomRadials = [
-    "INSTRUMENT AIR PRESS",
-    "START AIR PRESS",
-    "FINAL DISCH PRESS",
+    { label: "INSTRUMENT AIR PRESS", unit: "psi" },
+    { label: "START AIR PRESS", unit: "psi" },
+    { label: "FINAL DISCH PRESS", unit: "psi" },
   ];
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-6">
+      {/* Top Radial Gauges */}
       <div className="flex flex-wrap justify-center gap-8">
-        {topRadials.map((label, i) => (
-          <AnalogTopSemiGauge key={i} label={label} value={Math.floor(Math.random() * 100)} />
+        {topRadials.map((item, i) => (
+          <AnalogTopSemiGauge
+            key={i}
+            label={item.label}
+            value={Math.floor(Math.random() * 100)}
+            unit={item.unit}
+          />
         ))}
       </div>
 
+      {/* Mid Label Cards */}
       <div className="flex flex-wrap justify-center gap-6">
-        {midLabels.map((label, i) => (
-          <AnalogLabelCard key={i} label={label} value={Math.floor(Math.random() * 100)} />
+        {midLabels.map((item, i) => (
+          <AnalogLabelCard
+            key={i}
+            label={item.label}
+            value={Math.floor(Math.random() * 100)}
+            unit={item.unit}
+          />
         ))}
       </div>
 
+      {/* Bottom Radial Gauges */}
       <div className="flex flex-wrap justify-center gap-8">
-        {bottomRadials.map((label, i) => (
-          <AnalogTopSemiGauge key={i} label={label} value={Math.floor(Math.random() * 100)} />
+        {bottomRadials.map((item, i) => (
+          <AnalogTopSemiGauge
+            key={i}
+            label={item.label}
+            value={Math.floor(Math.random() * 100)}
+            unit={item.unit}
+          />
         ))}
       </div>
     </div>
