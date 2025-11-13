@@ -29,7 +29,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-25 bg-black text-gray-300 flex flex-col py-4 space-y-3 items-center">
+    <aside className="w-25 bg-black text-gray-300 flex flex-col py-41 space-y-3 items-center">
       {navItems.map((item) => {
         const Icon = item.icon;
         const isActive = pathname === item.href;
