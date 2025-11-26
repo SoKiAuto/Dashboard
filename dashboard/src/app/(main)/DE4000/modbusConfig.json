@@ -1,0 +1,36 @@
+{
+  "unitId": 200,
+  "host": "98.102.65.174",
+  "port": 502,
+  "timeout": 3000,
+  "readBlocks": [
+    {
+      "start": 0,
+      "length": 50,
+      "labels": {
+        "STG1_SUC_PRESSURE": { "offset": 0 },
+        "STG1_DISCH_PRESSURE": { "offset": 2 },
+        "STG2_SUC_PRESSURE": { "offset": 4 },
+        "STG2_DISCH_PRESSURE": { "offset": 6 },
+        "STG1_SUC_TEMP": { "offset": 8 },
+        "STG1_DISCH_TEMP": { "offset": 10 },
+        "STG2_SUC_TEMP": { "offset": 12 },
+        "STG2_DISCH_TEMP": { "offset": 14 },
+        "FUEL": { "offset": 16 },
+        "IGNITION": { "offset": 18 },
+        "CRANK": { "offset": 20 },
+        "PRELUBE": { "offset": 22 },
+        "COMP_OIL_HEADER_PRESS": { "offset": 24 },
+        "ENGINE_LUBE_OIL_PRESS": { "offset": 26 },
+        "FUEL_GAS_INLET_PRESS": { "offset": 28 },
+        "COMP_OIL_HEADER_TEMP": { "offset": 30 },
+        "ENGINE_LUBE_OIL_TEMP": { "offset": 32 },
+        "FUEL_GAS_INLET_TEMP": { "offset": 34 },
+        "INSTRUMENT_AIR_PRESS": { "offset": 36 },
+        "START_AIR_PRESS": { "offset": 38 },
+        "FINAL_DISCH_PRESS": { "offset": 40 }
+      }
+    }
+  ],
+  "floatByteOrder": "ABCD" 
+}
