@@ -93,7 +93,7 @@ export default function MultiTrendChart({ selectedTags }) {
     },
     scales: {
       x: {
-        ticks: { color: "#88", font: { size: 9 } },
+        ticks: { color: "#888", font: { size: 9 } },
         grid: { color: "rgba(255,255,255,0.1)" },
       },
       y: {
